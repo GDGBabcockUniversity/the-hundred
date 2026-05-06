@@ -1,5 +1,5 @@
 export const IMAGES = {
-  gdg_logo: { src: "/gdg-logo.svg", h: 100, w: 100 },
+  gdg_logo: { src: "/gdg-logo.png", h: 390, w: 390 },
 };
 
 export const NAV_LINKS = [
@@ -8,6 +8,11 @@ export const NAV_LINKS = [
   { label: "The Class", href: "/the-class" },
   { label: "FAQ", href: "/faq" },
 ] as const;
+
+export const PAGES = {
+  home: "/",
+  nominate: "/nominate",
+};
 
 export const STEPPER_LABELS = [
   "Nomination Type",
