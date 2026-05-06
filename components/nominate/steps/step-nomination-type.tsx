@@ -1,10 +1,5 @@
 import { cn } from "@/lib/utils";
-import type { NominationData } from "../nomination-form";
-
-interface StepNominationTypeProps {
-  data: NominationData;
-  updateFields: (fields: Partial<NominationData>) => void;
-}
+import type { StepProps } from "@/lib/interfaces";
 
 const OPTIONS = [
   {
@@ -19,10 +14,7 @@ const OPTIONS = [
   },
 ];
 
-export function StepNominationType({
-  data,
-  updateFields,
-}: StepNominationTypeProps) {
+const StepNominationType = ({ data, updateFields }: StepProps) => {
   return (
     <div>
       <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
@@ -80,4 +72,6 @@ export function StepNominationType({
       </div>
     </div>
   );
-}
+};
+
+export { StepNominationType };
