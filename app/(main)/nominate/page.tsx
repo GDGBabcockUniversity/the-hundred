@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     "Nominate a student at Babcock University for The 100. Selection is criteria-based and evidence-supported.",
 };
 
-export default function NominatePage() {
+const NominatePage = () => {
   return (
     <>
       {/* Hero */}
@@ -35,4 +35,6 @@ export default function NominatePage() {
       </section>
     </>
   );
-}
+};
+
+export default NominatePage;
