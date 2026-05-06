@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
-import { IMAGES, NAV_LINKS, SOCIAL_LINKS } from "@/lib/constants";
+import { IMAGES, NAV_LINKS, PAGES, SOCIAL_LINKS } from "@/lib/constants";
 
-function SocialIcon({ icon }: { icon: string }) {
+const SocialIcon = ({ icon }: { icon: string }) => {
   switch (icon) {
     case "twitter":
       return (
@@ -31,7 +31,7 @@ function SocialIcon({ icon }: { icon: string }) {
     default:
       return null;
   }
-}
+};
 
 const SOCIAL_COLORS: Record<string, string> = {
   twitter: "bg-black hover:bg-black/80",
@@ -40,7 +40,7 @@ const SOCIAL_COLORS: Record<string, string> = {
   tiktok: "bg-black hover:bg-black/80",
 };
 
-export function Footer() {
+const Footer = () => {
   return (
     <footer className="relative overflow-hidden bg-brand-navy">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
@@ -77,7 +77,7 @@ export function Footer() {
                   </Link>
                 ))}
                 <Link
-                  href="/nominate"
+                  href={PAGES.nominate}
                   className="text-sm text-white/60 transition-colors hover:text-white"
                 >
                   Nominate
@@ -111,12 +111,12 @@ export function Footer() {
       </div>
 
       {/* Rope graphic */}
-      <div className="pointer-events-none absolute bottom-0 right-0 hidden h-full w-[400px] md:block">
+      <div className="pointer-events-none absolute bottom-12 right-0 hidden h-full w-[400px] md:block">
         <Image
           src="/rope-graphic-footer.svg"
           alt=""
           fill
-          className="object-contain object-right-bottom"
+          className="object-contain object-bottom-right"
         />
       </div>
 
@@ -131,4 +131,6 @@ export function Footer() {
       </div>
     </footer>
   );
-}
+};
+
+export { Footer };
