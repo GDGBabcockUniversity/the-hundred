@@ -5,39 +5,13 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { StepIndicator } from "./step-indicator";
 import { StepNominationType } from "./steps/step-nomination-type";
-import { STEPPER_LABELS } from "@/lib/constants";
-import { StepDeclaration } from "./steps/step-declaration";
 import { StepNomineeInfo } from "./steps/step-nominee-info";
 import { StepRecognitionArea } from "./steps/step-recognition-area";
 import { StepContribution } from "./steps/step-contribution";
 import { StepEvidence } from "./steps/step-evidence";
-
-export interface NominationData {
-  // Step 0: Nomination Type
-  nominationType: "other" | "self";
-  // Step 1: Nominee Info
-  nomineeName: string;
-  department: string;
-  faculty: string;
-  level: string;
-  phone: string;
-  email: string;
-  social: string;
-  // Step 2: Recognition Area
-  recognitionArea: string;
-  // Step 3: Contribution
-  briefSummary: string;
-  fullDescription: string;
-  impact: string;
-  // Step 4: Evidence
-  evidenceLinks: string;
-  // Step 5: Declaration
-  nominatorName: string;
-  nominatorEmail: string;
-  nominatorRelationship: string;
-  confirmAccurate: boolean;
-  confirmNoGuarantee: boolean;
-}
+import { StepDeclaration } from "./steps/step-declaration";
+import { STEPPER_LABELS } from "@/lib/constants";
+import type { NominationData } from "@/lib/interfaces";
 
 const INITIAL_DATA: NominationData = {
   nominationType: "other",
@@ -62,33 +36,33 @@ const INITIAL_DATA: NominationData = {
 
 const TOTAL_STEPS = STEPPER_LABELS.length;
 
-export function NominationForm() {
+const NominationForm = () => {
   const [currentStep, setCurrentStep] = useState(0);
   const [formData, setFormData] = useState<NominationData>(INITIAL_DATA);
 
-  function updateFields(fields: Partial<NominationData>) {
+  const updateFields = (fields: Partial<NominationData>) => {
     setFormData((prev) => ({ ...prev, ...fields }));
-  }
+  };
 
-  function handleNext() {
+  const handleNext = () => {
     if (currentStep < TOTAL_STEPS - 1) {
       setCurrentStep((prev) => prev + 1);
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
-  }
+  };
 
-  function handlePrevious() {
+  const handlePrevious = () => {
     if (currentStep > 0) {
       setCurrentStep((prev) => prev - 1);
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
-  }
+  };
 
-  function handleSubmit() {
+  const handleSubmit = () => {
     // TODO: Wire to Google Sheets API
     console.log("Form submitted:", formData);
     alert("Thank you! Your nomination has been submitted.");
-  }
+  };
 
   const isLastStep = currentStep === TOTAL_STEPS - 1;
 
@@ -144,4 +118,6 @@ export function NominationForm() {
       </div>
     </div>
   );
-}
+};
+
+export { NominationForm };
