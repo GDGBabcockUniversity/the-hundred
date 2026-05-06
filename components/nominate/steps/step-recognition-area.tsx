@@ -1,16 +1,8 @@
 import { RECOGNITION_AREAS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
-import type { NominationData } from "../nomination-form";
+import type { StepProps } from "@/lib/interfaces";
 
-interface StepRecognitionAreaProps {
-  data: NominationData;
-  updateFields: (fields: Partial<NominationData>) => void;
-}
-
-export function StepRecognitionArea({
-  data,
-  updateFields,
-}: StepRecognitionAreaProps) {
+const StepRecognitionArea = ({ data, updateFields }: StepProps) => {
   return (
     <div>
       <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
@@ -46,4 +38,6 @@ export function StepRecognitionArea({
       </div>
     </div>
   );
-}
+};
+
+export { StepRecognitionArea };
