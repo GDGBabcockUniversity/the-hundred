@@ -2,14 +2,9 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { ShieldCheck } from "lucide-react";
-import type { NominationData } from "../nomination-form";
+import type { StepProps } from "@/lib/interfaces";
 
-interface StepDeclarationProps {
-  data: NominationData;
-  updateFields: (fields: Partial<NominationData>) => void;
-}
-
-export function StepDeclaration({ data, updateFields }: StepDeclarationProps) {
+const StepDeclaration = ({ data, updateFields }: StepProps) => {
   return (
     <div>
       <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
@@ -123,4 +118,6 @@ export function StepDeclaration({ data, updateFields }: StepDeclarationProps) {
       </div>
     </div>
   );
-}
+};
+
+export { StepDeclaration };
