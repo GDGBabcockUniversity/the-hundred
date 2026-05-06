@@ -5,12 +5,12 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { StepIndicator } from "./step-indicator";
 import { StepNominationType } from "./steps/step-nomination-type";
+import { STEPPER_LABELS } from "@/lib/constants";
+import { StepDeclaration } from "./steps/step-declaration";
 import { StepNomineeInfo } from "./steps/step-nominee-info";
 import { StepRecognitionArea } from "./steps/step-recognition-area";
 import { StepContribution } from "./steps/step-contribution";
 import { StepEvidence } from "./steps/step-evidence";
-import { StepDeclaration } from "./steps/step-declaration";
-import { STEPPER_LABELS } from "@/lib/constants";
 
 export interface NominationData {
   // Step 0: Nomination Type
