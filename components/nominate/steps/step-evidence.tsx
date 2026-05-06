@@ -1,14 +1,9 @@
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { LinkIcon, Upload } from "lucide-react";
-import type { NominationData } from "../nomination-form";
+import type { StepProps } from "@/lib/interfaces";
 
-interface StepEvidenceProps {
-  data: NominationData;
-  updateFields: (fields: Partial<NominationData>) => void;
-}
-
-export function StepEvidence({ data, updateFields }: StepEvidenceProps) {
+const StepEvidence = ({ data, updateFields }: StepProps) => {
   return (
     <div>
       <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
@@ -60,4 +55,6 @@ export function StepEvidence({ data, updateFields }: StepEvidenceProps) {
       </div>
     </div>
   );
-}
+};
+
+export { StepEvidence };
