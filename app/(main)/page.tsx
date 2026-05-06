@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { PAGES } from "@/lib/constants";
 
-export default function HomePage() {
+const HomePage = () => {
   return (
     <>
       {/* Hero */}
@@ -33,7 +34,7 @@ export default function HomePage() {
               size="lg"
               className="h-12 gap-2 rounded-xl bg-brand-navy px-8 text-base text-white hover:bg-brand-navy/90"
             >
-              <Link href="/nominate">
+              <Link href={PAGES.nominate}>
                 Nominate a Student
                 <ArrowRight className="size-4" />
               </Link>
@@ -126,7 +127,7 @@ export default function HomePage() {
             size="lg"
             className="mt-8 h-12 gap-2 rounded-xl bg-brand-blue px-8 text-base text-white hover:bg-brand-blue/90"
           >
-            <Link href="/nominate">
+            <Link href={PAGES.nominate}>
               Start a Nomination
               <ArrowRight className="size-4" />
             </Link>
@@ -135,4 +136,6 @@ export default function HomePage() {
       </section>
     </>
   );
-}
+};
+
+export default HomePage;
