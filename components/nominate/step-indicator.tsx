@@ -1,12 +1,9 @@
 import { STEPPER_LABELS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { Check } from "lucide-react";
+import type { StepIndicatorProps } from "@/lib/interfaces";
 
-interface StepIndicatorProps {
-  currentStep: number;
-}
-
-export function StepIndicator({ currentStep }: StepIndicatorProps) {
+const StepIndicator = ({ currentStep }: StepIndicatorProps) => {
   return (
     <div className="w-full overflow-x-auto pb-2">
       <div className="flex min-w-[500px] items-center justify-between">
@@ -63,4 +60,6 @@ export function StepIndicator({ currentStep }: StepIndicatorProps) {
       </div>
     </div>
   );
-}
+};
+
+export { StepIndicator };
