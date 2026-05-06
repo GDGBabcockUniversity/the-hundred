@@ -1,13 +1,8 @@
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import type { NominationData } from "../nomination-form";
+import type { StepProps } from "@/lib/interfaces";
 
-interface StepNomineeInfoProps {
-  data: NominationData;
-  updateFields: (fields: Partial<NominationData>) => void;
-}
-
-export function StepNomineeInfo({ data, updateFields }: StepNomineeInfoProps) {
+const StepNomineeInfo = ({ data, updateFields }: StepProps) => {
   const isOther = data.nominationType === "other";
 
   return (
@@ -115,4 +110,6 @@ export function StepNomineeInfo({ data, updateFields }: StepNomineeInfoProps) {
       </div>
     </div>
   );
-}
+};
+
+export { StepNomineeInfo };
