@@ -1,16 +1,8 @@
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import type { NominationData } from "../nomination-form";
+import type { StepProps } from "@/lib/interfaces";
 
-interface StepContributionProps {
-  data: NominationData;
-  updateFields: (fields: Partial<NominationData>) => void;
-}
-
-export function StepContribution({
-  data,
-  updateFields,
-}: StepContributionProps) {
+const StepContribution = ({ data, updateFields }: StepProps) => {
   return (
     <div>
       <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
@@ -69,4 +61,6 @@ export function StepContribution({
       </div>
     </div>
   );
-}
+};
+
+export { StepContribution };
