@@ -2,26 +2,10 @@ export const IMAGES = {
   gdg_logo: { src: "/gdg-logo.png", h: 390, w: 390 },
 };
 
-export const NAV_LINKS = [
-  { label: "About", href: "/about" },
-  { label: "Methodology", href: "/methodology" },
-  { label: "The Class", href: "/the-class" },
-  { label: "FAQ", href: "/faq" },
-] as const;
-
 export const PAGES = {
   home: "/",
   nominate: "/nominate",
 };
-
-export const STEPPER_LABELS = [
-  "Nomination Type",
-  "Nominee Info",
-  "Recognition Area",
-  "Contribution",
-  "Evidence",
-  "Declaration",
-] as const;
 
 export const RECOGNITION_AREAS = [
   "Leadership",

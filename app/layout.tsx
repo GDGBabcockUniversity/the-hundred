@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, DM_Sans } from "next/font/google";
+import { DM_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
+import { cn } from "@/lib/utils";
 
-const cormorantGaramond = Cormorant_Garamond({
+const tanPearl = localFont({
+  src: "../public/fonts/tan-pearl-regular.otf",
   variable: "--font-serif",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -29,7 +30,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${cormorantGaramond.variable} ${dmSans.variable} h-full antialiased`}
+      className={cn(tanPearl.variable, dmSans.variable, "h-full antialiased")}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
