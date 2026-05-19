@@ -5,6 +5,7 @@ import { Step1About } from "@/components/nomination/Step1About";
 import { Step2Nomination } from "@/components/nomination/Step2Nomination";
 import { Step3Confirm } from "@/components/nomination/Step3Confirm";
 import { Step4Success } from "@/components/nomination/Step4Success";
+import { cn } from "@/lib/utils";
 
 export function NominationWizard() {
   const [step, setStep] = useState(1);
@@ -19,8 +20,8 @@ export function NominationWizard() {
 
   const steps = [
     { num: 1, label: "About the nominee" },
-    { num: 2, label: "The nomination" },
-    { num: 3, label: "Confirm" },
+    { num: 2, label: "Nomination" },
+    { num: 3, label: "Submission" },
   ];
 
   return (
@@ -35,16 +36,17 @@ export function NominationWizard() {
             className="flex flex-col items-center gap-2 bg-white px-2"
           >
             <div
-              className={`w-3 h-3 rounded-full shrink-0 transition-colors ${
-                step >= s.num
-                  ? step === s.num
-                    ? "bg-brand-blue"
-                    : "bg-brand-green"
-                  : "bg-gray-200"
-              }`}
+              className={cn("w-3 h-3 rounded-full shrink-0 transition-colors", {
+                "bg-brand-blue": step === s.num,
+                "bg-brand-green": step > s.num,
+                "bg-gray-200": step < s.num,
+              })}
             />
             <span
-              className={`text-xs font-medium ${step >= s.num ? "text-brand-navy" : "text-gray-400"}`}
+              className={cn(`text-xs font-medium`, {
+                "text-brand-navy": step >= s.num,
+                "text-gray-400": step < s.num,
+              })}
             >
               {s.label}
             </span>
