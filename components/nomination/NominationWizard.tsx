@@ -27,31 +27,47 @@ export function NominationWizard() {
   return (
     <div>
       {/* Progress Indicator */}
-      <div className="flex items-center justify-between mb-16 relative">
-        <div className="absolute left-0 top-1/2 -translate-y-1/2 w-full h-0.5 bg-gray-100 -z-10" />
+      <div className="relative mb-16 w-full">
+        {/* Background track */}
+        <div className="absolute left-[16.66%] right-[16.66%] top-2 h-[2px] bg-gray-100 -z-10" />
 
-        {steps.map((s) => (
-          <div
-            key={s.num}
-            className="flex flex-col items-center gap-2 bg-white px-2"
-          >
+        {/* Active track */}
+        <div
+          className="absolute left-[16.66%] top-2 h-[2px] bg-brand-blue -z-10 transition-all duration-500 ease-in-out"
+          style={{ width: `${((step - 1) / (steps.length - 1)) * 66.66}%` }}
+        />
+
+        <div className="flex justify-between w-full">
+          {steps.map((s) => (
             <div
-              className={cn("w-3 h-3 rounded-full shrink-0 transition-colors", {
-                "bg-brand-blue": step === s.num,
-                "bg-brand-green": step > s.num,
-                "bg-gray-200": step < s.num,
-              })}
-            />
-            <span
-              className={cn(`text-xs font-medium`, {
-                "text-brand-navy": step >= s.num,
-                "text-gray-400": step < s.num,
-              })}
+              key={s.num}
+              className="flex flex-col items-center flex-1 gap-2"
             >
-              {s.label}
-            </span>
-          </div>
-        ))}
+              <div className="bg-white px-4">
+                <div
+                  className={cn(
+                    "w-4 h-4 rounded-full shrink-0 transition-colors duration-500",
+                    {
+                      "bg-brand-blue": step >= s.num,
+                      "bg-gray-100": step < s.num,
+                    },
+                  )}
+                />
+              </div>
+              <span
+                className={cn(
+                  "text-xs font-medium transition-colors duration-500",
+                  {
+                    "text-brand-blue": step >= s.num,
+                    "text-gray-400": step < s.num,
+                  },
+                )}
+              >
+                {s.label}
+              </span>
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* Step Content */}
