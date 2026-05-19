@@ -105,7 +105,7 @@ export function Footer() {
 
       <div className="absolute -bottom-10 -right-10 w-64 h-64 md:w-96 md:h-96 z-0 pointer-events-none">
         <Image
-          src="/footer-doodle.png"
+          src={IMAGES.footer_doodle.src}
           alt="Footer Doodle"
           fill
           className="object-contain"
