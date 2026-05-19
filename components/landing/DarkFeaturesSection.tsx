@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Play } from "lucide-react";
+import { IMAGES } from "@/lib/constants";
 
 export function DarkFeaturesSection() {
   return (
@@ -33,10 +34,10 @@ export function DarkFeaturesSection() {
               legibel to the wider community.
             </p>
             <Image
-              src="/visibility-icon.png"
+              src={IMAGES.visibility_icon.src}
               alt="Visibility"
-              width={600}
-              height={600}
+              width={IMAGES.visibility_icon.w}
+              height={IMAGES.visibility_icon.h}
               className="w-60 h-60 object-contain relative -left-6 md:-left-16"
             />
           </div>
@@ -55,10 +56,10 @@ export function DarkFeaturesSection() {
               graduated.
             </p>
             <Image
-              src="/memory-icon.png"
+              src={IMAGES.memory_icon.src}
               alt="Memory"
-              width={600}
-              height={600}
+              width={IMAGES.memory_icon.w}
+              height={IMAGES.memory_icon.h}
               className="w-60 h-60 object-contain relative -left-6 md:-left-19"
             />
           </div>
@@ -77,10 +78,10 @@ export function DarkFeaturesSection() {
               performing.
             </p>
             <Image
-              src="/culture-icon.png"
+              src={IMAGES.culture_icon.src}
               alt="Culture"
-              width={600}
-              height={600}
+              width={IMAGES.culture_icon.w}
+              height={IMAGES.culture_icon.h}
               className="w-60 h-60 object-contain relative -left-6 md:-left-14"
             />
           </div>
