@@ -36,7 +36,9 @@ export function HeroSection() {
           </p>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif text-brand-navy leading-snug mb-8 font-extrabold">
             Recognizing 100 students
-            <span className="text-brand-blue/80 ml-3 font-bold">shaping</span>
+            <span className="text-brand-blue/50 italic ml-3 font-bold">
+              shaping
+            </span>
             <br />
             Babcock University.
           </h1>
