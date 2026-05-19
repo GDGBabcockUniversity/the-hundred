@@ -102,7 +102,7 @@ export function ProcessSection() {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section 1 Header */}
         <div className="mb-24 relative">
-          <div className="flex items-center gap-4 w-1/2 pr-6">
+          <div className="flex items-center gap-4 w-full max-w-2xl pr-6">
             <p className="text-brand-blue text-sm font-semibold uppercase tracking-widest mb-4">
               RECOGNITION AREAS —
             </p>
