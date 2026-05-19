@@ -39,7 +39,9 @@ export function ValuePropSection() {
             WHAT THE 100 IS —
           </p>
           <h2 className="text-4xl md:text-5xl font-bold font-serif text-brand-navy leading-snug mb-6">
-            A record of real contribution
+            A record of{" "}
+            <span className="text-brand-navy/50 italic font-bold">real</span>{" "}
+            contribution
           </h2>
           <div className="space-y-6 text-gray-600 mb-8">
             <p>
