@@ -27,7 +27,7 @@ export function DarkFeaturesSection() {
             <h3 className="text-2xl font-serif mb-4 flex items-center gap-3">
               Visibility
             </h3>
-            <p className="text-gray-400 text-sm leading-relaxed mb-8">
+            <p className="text-gray-400 text-sm leading-relaxed">
               Many students contribute enormously to campus life witout ever
               receiving formal recognition. The 100 makes that work visible and
               legibel to the wider community.
@@ -35,9 +35,9 @@ export function DarkFeaturesSection() {
             <Image
               src="/visibility-icon.png"
               alt="Visibility"
-              width={64}
-              height={64}
-              className="w-60 h-60 object-contain"
+              width={600}
+              height={600}
+              className="w-60 h-60 object-contain relative -left-16"
             />
           </div>
 
@@ -49,7 +49,7 @@ export function DarkFeaturesSection() {
             <h3 className="text-2xl font-serif mb-4 flex items-center gap-3">
               Memory
             </h3>
-            <p className="text-gray-400 text-sm leading-relaxed mb-8">
+            <p className="text-gray-400 text-sm leading-relaxed">
               Contributions fade. Stories get lost. This platform is designed as
               a living archive — a record that persists long after a student has
               graduated.
@@ -57,9 +57,9 @@ export function DarkFeaturesSection() {
             <Image
               src="/memory-icon.png"
               alt="Memory"
-              width={64}
-              height={64}
-              className="w-60 h-60 object-contain"
+              width={600}
+              height={600}
+              className="w-60 h-60 object-contain relative -left-19"
             />
           </div>
 
@@ -79,9 +79,9 @@ export function DarkFeaturesSection() {
             <Image
               src="/culture-icon.png"
               alt="Culture"
-              width={64}
-              height={64}
-              className="w-60 h-60 object-contain"
+              width={600}
+              height={600}
+              className="w-60 h-60 object-contain relative -left-14"
             />
           </div>
         </div>
