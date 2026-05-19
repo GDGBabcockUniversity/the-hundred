@@ -4,6 +4,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ArrowLeft } from "lucide-react";
 import { RECOGNITION_AREAS } from "@/lib/constants";
+import { cn } from "@/lib/utils";
 
 export function Step2Nomination({
   onNext,
@@ -51,11 +52,14 @@ export function Step2Nomination({
               <button
                 key={cat}
                 onClick={() => toggleCategory(cat)}
-                className={`px-4 py-2 rounded-full text-xs font-medium border transition-colors ${
-                  selectedCategories.includes(cat)
-                    ? "bg-brand-green/10 border-brand-green text-brand-green"
-                    : "bg-white border-gray-200 text-gray-600 hover:border-brand-green/50"
-                }`}
+                className={cn(
+                  `px-4 py-2 rounded-md text-xs font-medium border transition-colors ${
+                    selectedCategories.includes(cat)
+                      ? "bg-brand-green/10 border-brand-green text-brand-green"
+                      : "bg-white border-gray-200 text-gray-600 hover:border-brand-green/50"
+                  }`,
+                  "cursor-pointer",
+                )}
               >
                 {cat}
               </button>
