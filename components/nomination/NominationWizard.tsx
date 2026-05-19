@@ -56,7 +56,7 @@ export function NominationWizard() {
               </div>
               <span
                 className={cn(
-                  "text-xs font-medium transition-colors duration-500",
+                  "text-xs font-medium transition-colors duration-500 text-center",
                   {
                     "text-brand-blue": step >= s.num,
                     "text-gray-400": step < s.num,
