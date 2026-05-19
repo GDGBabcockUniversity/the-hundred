@@ -75,20 +75,17 @@ export function HeroSection() {
           </div>
         </div>
 
-        {/* Decorative Giant Text */}
-        {/* <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 opacity-20 pointer-events-none select-none">
+        {/* Right side decorative text */}
+        <div className="hidden lg:block relative w-full h-full pointer-events-none select-none opacity-5">
           <div
-            className="font-serif text-[18rem] leading-[0.8] text-transparent"
+            className="absolute right-0 xl:-right-10 top-1/2 -translate-y-1/2 font-serif text-[12rem] xl:text-[15rem] leading-[0.85] text-transparent text-right whitespace-nowrap"
             style={{ WebkitTextStroke: "2px #0f1729" }}
           >
             BABCOCK
             <br />
-            <span className="ml-24">100</span>
+            100
           </div>
-          <div className="absolute -right-4 bottom-0 text-xs tracking-[0.3em] font-mono text-brand-navy transform -rotate-90 origin-bottom-right">
-            SCROLL TO EXPLORE
-          </div>
-        </div> */}
+        </div>
       </div>
     </section>
   );
