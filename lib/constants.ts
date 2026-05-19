@@ -21,8 +21,8 @@ export const RECOGNITION_AREAS = [
 ] as const;
 
 export const SOCIAL_LINKS = [
-  { label: "X", href: "https://x.com", icon: "twitter" },
-  { label: "LinkedIn", href: "https://linkedin.com", icon: "linkedin" },
-  { label: "Instagram", href: "https://instagram.com", icon: "instagram" },
-  { label: "TikTok", href: "https://tiktok.com", icon: "tiktok" },
+  { label: "X", href: "https://x.com/gdgbabcock" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/gdgbabcock" },
+  { label: "Instagram", href: "https://instagram.com/gdgbabcock" },
+  { label: "TikTok", href: "https://tiktok.com/gdgbabcock" },
 ] as const;
