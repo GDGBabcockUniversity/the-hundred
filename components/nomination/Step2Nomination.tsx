@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ArrowLeft } from "lucide-react";
 import { RECOGNITION_AREAS } from "@/lib/constants";
@@ -13,7 +12,19 @@ export function Step2Nomination({
   onNext: () => void;
   onPrev: () => void;
 }) {
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+
+  const toggleCategory = (cat: string) => {
+    setSelectedCategories((prev) => {
+      if (prev.includes(cat)) {
+        return prev.filter((c) => c !== cat);
+      }
+      if (prev.length < 2) {
+        return [...prev, cat];
+      }
+      return prev;
+    });
+  };
 
   return (
     <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
@@ -39,9 +50,9 @@ export function Step2Nomination({
             {RECOGNITION_AREAS.map((cat) => (
               <button
                 key={cat}
-                onClick={() => setSelectedCategory(cat)}
+                onClick={() => toggleCategory(cat)}
                 className={`px-4 py-2 rounded-full text-xs font-medium border transition-colors ${
-                  selectedCategory === cat
+                  selectedCategories.includes(cat)
                     ? "bg-brand-green/10 border-brand-green text-brand-green"
                     : "bg-white border-gray-200 text-gray-600 hover:border-brand-green/50"
                 }`}
