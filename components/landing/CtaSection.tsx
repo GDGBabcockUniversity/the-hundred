@@ -17,11 +17,16 @@ export function CtaSection() {
 
         <div className="relative z-10">
           <h2 className="max-w-2xl font-bold leading-snug mx-auto text-4xl md:text-5xl font-serif text-brand-navy mb-6">
-            Know someone who deerves to be seen?
+            Know someone who{" "}
+            <span className="text-brand-navy/50 italic font-bold">
+              deserves
+            </span>{" "}
+            to be seen?
           </h2>
           <p className="text-brand-gray-light mb-10 max-w-2xl mx-auto text-lg">
-            Our nominations are currently open. Help us uncover the next
-            generation of students shaping Babcock University.
+            Nominations are now open. The process takes about ten minutes and
+            requires specific, evidenced information about the nominee's
+            contribution.
           </p>
           <Button
             asChild
