@@ -93,16 +93,14 @@ export function Footer() {
         </div>
       </div>
 
-      {/* Placeholder for the colorful ribbon SVG on the bottom right */}
-      {/* <div className="absolute -bottom-10 -right-10 w-96 h-96 opacity-50 z-0">
-        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-          <path
-            fill="#4285F4"
-            d="M44.7,-76.4C58.8,-69.2,71.8,-59.1,80.3,-46.1C88.8,-33.1,92.8,-17.1,91.8,-1.7C90.8,13.7,84.7,28.5,75.4,41.1C66.1,53.7,53.5,64.1,39.6,70.5C25.7,76.9,10.5,79.3,-4.2,79.9C-18.9,80.5,-33.8,79.3,-46.5,72.4C-59.2,65.5,-69.7,52.9,-77.6,39.1C-85.5,25.3,-90.8,10.3,-91.3,-4.9C-91.8,-20.1,-87.5,-35.5,-79,-48.5C-70.5,-61.5,-57.8,-72,-43.7,-79.1C-29.6,-86.2,-14.8,-89.9,0.3,-90.3C15.4,-90.8,30.6,-83.6,44.7,-76.4Z"
-            transform="translate(100 100) scale(1.1)"
-          />
-        </svg>
-      </div> */}
+      <div className="absolute -bottom-10 -right-10 w-96 h-96 z-0 pointer-events-none">
+        <Image
+          src="/footer-doodle.png"
+          alt="Footer Doodle"
+          fill
+          className="object-contain"
+        />
+      </div>
     </footer>
   );
 }
