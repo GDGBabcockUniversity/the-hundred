@@ -18,7 +18,7 @@ export function Header() {
           />
         </Link>
 
-        <div className="bg-white/80 backdrop-blur-md border border-gray-200 rounded-xl px-6 py-3 flex items-center justify-between shadow-sm">
+        <div className="bg-white/80 backdrop-blur-md border border-gray-200 rounded-xl px-3 py-2 md:px-6 md:py-3 flex items-center justify-between shadow-sm">
           <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
             <Link href="#about" className="text-gray-600 hover:text-gray-900">
               About
