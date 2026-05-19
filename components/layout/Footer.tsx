@@ -1,7 +1,14 @@
 import Link from "next/link";
-import { Globe, MessageCircle, Mail } from "lucide-react";
 import Image from "next/image";
-import { IMAGES } from "@/lib/constants";
+import { IMAGES, SOCIAL_LINKS } from "@/lib/constants";
+import { FaXTwitter, FaLinkedin, FaInstagram, FaTiktok } from "react-icons/fa6";
+
+const iconMap = {
+  X: FaXTwitter,
+  LinkedIn: FaLinkedin,
+  Instagram: FaInstagram,
+  TikTok: FaTiktok,
+};
 
 export function Footer() {
   return (
@@ -63,26 +70,29 @@ export function Footer() {
             </div>
 
             <div>
-              <h3 className="font-semibold text-sm mb-4">Contact us</h3>
+              <h3 className="font-semibold text-sm mb-4">Connect</h3>
               <div className="flex gap-4">
-                <a
-                  href="#"
-                  className="w-10 h-10 rounded-full bg-brand-blue flex items-center justify-center hover:opacity-90 transition-opacity"
-                >
-                  <MessageCircle className="w-5 h-5" />
-                </a>
-                <a
-                  href="#"
-                  className="w-10 h-10 rounded-full bg-brand-red flex items-center justify-center hover:opacity-90 transition-opacity"
-                >
-                  <Globe className="w-5 h-5" />
-                </a>
-                <a
-                  href="#"
-                  className="w-10 h-10 rounded-full bg-brand-amber flex items-center justify-center hover:opacity-90 transition-opacity"
-                >
-                  <Mail className="w-5 h-5" />
-                </a>
+                {SOCIAL_LINKS.map((link, i) => {
+                  const Icon = iconMap[link.label as keyof typeof iconMap];
+                  const colors = [
+                    "bg-brand-blue",
+                    "bg-brand-red",
+                    "bg-brand-amber",
+                    "bg-brand-green",
+                  ];
+                  const bgColor = colors[i % colors.length];
+                  return (
+                    <a
+                      key={link.label}
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`w-10 h-10 rounded-full ${bgColor} flex items-center justify-center hover:opacity-90 transition-opacity`}
+                    >
+                      {Icon && <Icon className="w-5 h-5 text-white" />}
+                    </a>
+                  );
+                })}
               </div>
             </div>
           </div>
