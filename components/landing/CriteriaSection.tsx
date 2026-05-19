@@ -15,7 +15,7 @@ export function CriteriaSection() {
   ];
 
   return (
-    <section className="bg-[#fdfbf7] py-24 px-4 sm:px-6 lg:px-8">
+    <section className="bg-brand-amber/20 py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="mb-12 max-w-2xl">
           <p className="text-brand-green text-sm font-semibold uppercase tracking-widest mb-4">
