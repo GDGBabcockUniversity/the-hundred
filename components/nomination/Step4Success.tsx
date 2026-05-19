@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { IMAGES } from "@/lib/constants";
 
 export function Step4Success() {
   return (
@@ -7,7 +8,13 @@ export function Step4Success() {
       <div className="bg-brand-navy rounded-3xl p-12 text-center text-white relative overflow-hidden shadow-xl">
         <div className="flex justify-center mb-6 relative z-10">
           <div className="w-16 h-16 rounded-full bg-brand-amber/20 flex items-center justify-center">
-            <Image src="/success-check.png" alt="Success Check" width={32} height={32} className="w-8 h-8 object-contain" />
+            <Image
+              src={IMAGES.success_check.src}
+              alt="Success Check"
+              width={IMAGES.success_check.w}
+              height={IMAGES.success_check.h}
+              className="w-8 h-8 object-contain"
+            />
           </div>
         </div>
 
