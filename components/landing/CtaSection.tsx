@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Layers, Star } from "lucide-react";
+import Image from "next/image";
 import { PAGES } from "@/lib/constants";
 
 export function CtaSection() {
@@ -8,11 +8,23 @@ export function CtaSection() {
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-brand-navy">
       <div className="max-w-7xl mx-auto bg-white rounded-3xl p-12 md:p-20 text-center relative overflow-hidden">
         {/* Background elements placeholders */}
-        <div className="absolute top-0 right-0 opacity-20 pointer-events-none transform translate-x-1/4 -translate-y-1/4">
-          <Layers className="w-64 h-64 text-brand-navy" strokeWidth={1} />
+        <div className="absolute top-0 right-0 pointer-events-none transform translate-x-1/4 -translate-y-1/4">
+          <Image
+            src="/cta-stack.png"
+            alt="CTA Stack"
+            width={256}
+            height={256}
+            className="w-64 h-64 object-contain"
+          />
         </div>
-        <div className="absolute bottom-0 left-0 opacity-20 pointer-events-none transform -translate-x-1/4 translate-y-1/4">
-          <Star className="w-64 h-64 text-brand-navy" strokeWidth={1} />
+        <div className="absolute bottom-0 left-0 pointer-events-none transform -translate-x-1/4 translate-y-1/4">
+          <Image
+            src="/cta-star.png"
+            alt="CTA Star"
+            width={256}
+            height={256}
+            className="w-64 h-64 object-contain"
+          />
         </div>
 
         <div className="relative z-10">
