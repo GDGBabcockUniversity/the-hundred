@@ -37,7 +37,7 @@ export function DarkFeaturesSection() {
               alt="Visibility"
               width={600}
               height={600}
-              className="w-60 h-60 object-contain relative -left-16"
+              className="w-60 h-60 object-contain relative -left-6 md:-left-16"
             />
           </div>
 
@@ -59,7 +59,7 @@ export function DarkFeaturesSection() {
               alt="Memory"
               width={600}
               height={600}
-              className="w-60 h-60 object-contain relative -left-19"
+              className="w-60 h-60 object-contain relative -left-6 md:-left-19"
             />
           </div>
 
@@ -81,7 +81,7 @@ export function DarkFeaturesSection() {
               alt="Culture"
               width={600}
               height={600}
-              className="w-60 h-60 object-contain relative -left-14"
+              className="w-60 h-60 object-contain relative -left-6 md:-left-14"
             />
           </div>
         </div>
