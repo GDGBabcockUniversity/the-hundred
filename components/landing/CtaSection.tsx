@@ -14,7 +14,7 @@ export function CtaSection() {
             alt="CTA Stack"
             width={256}
             height={256}
-            className="w-64 h-64 object-contain"
+            className="w-32 h-32 md:w-64 md:h-64 object-contain"
           />
         </div>
         <div className="absolute bottom-0 left-0 pointer-events-none transform -translate-x-1/4 translate-y-1/4">
@@ -23,7 +23,7 @@ export function CtaSection() {
             alt="CTA Star"
             width={256}
             height={256}
-            className="w-64 h-64 object-contain"
+            className="w-32 h-32 md:w-64 md:h-64 object-contain"
           />
         </div>
 
