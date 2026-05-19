@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { PAGES } from "@/lib/constants";
+import { IMAGES, PAGES } from "@/lib/constants";
 
 export function CtaSection() {
   return (
@@ -10,19 +10,19 @@ export function CtaSection() {
         {/* Background elements placeholders */}
         <div className="absolute top-0 right-0 pointer-events-none transform translate-x-1/4 -translate-y-1/4">
           <Image
-            src="/cta-stack.png"
+            src={IMAGES.cta_stack.src}
             alt="CTA Stack"
-            width={256}
-            height={256}
+            width={IMAGES.cta_stack.w}
+            height={IMAGES.cta_stack.h}
             className="w-32 h-32 md:w-64 md:h-64 object-contain"
           />
         </div>
         <div className="absolute bottom-0 left-0 pointer-events-none transform -translate-x-1/4 translate-y-1/4">
           <Image
-            src="/cta-star.png"
+            src={IMAGES.cta_star.src}
             alt="CTA Star"
-            width={256}
-            height={256}
+            width={IMAGES.cta_star.w}
+            height={IMAGES.cta_star.h}
             className="w-32 h-32 md:w-64 md:h-64 object-contain"
           />
         </div>
