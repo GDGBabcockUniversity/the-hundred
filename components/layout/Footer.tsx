@@ -33,7 +33,7 @@ export function Footer() {
           <div className="flex flex-col gap-6">
             <div>
               <h3 className="font-semibold text-sm mb-4">Quick links</h3>
-              <ul className="flex items-center gap-4 text-sm text-gray-300">
+              <ul className="flex flex-wrap items-center gap-4 text-sm text-gray-300">
                 <li>
                   <Link
                     href="#about"
@@ -103,7 +103,7 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="absolute -bottom-10 -right-10 w-96 h-96 z-0 pointer-events-none">
+      <div className="absolute -bottom-10 -right-10 w-64 h-64 md:w-96 md:h-96 z-0 pointer-events-none">
         <Image
           src="/footer-doodle.png"
           alt="Footer Doodle"
