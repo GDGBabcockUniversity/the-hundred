@@ -104,7 +104,7 @@ export function ProcessSection() {
         <div className="mb-24 relative">
           <div className="flex items-center gap-4 w-full max-w-2xl pr-6">
             <p className="text-brand-blue text-sm font-semibold uppercase tracking-widest mb-4">
-              RECOGNITION AREAS —
+              How selection works —
             </p>
           </div>
 
@@ -179,10 +179,9 @@ export function ProcessSection() {
 
         <div className="max-w-3xl mx-auto bg-white rounded-3xl p-6 sm:p-10 lg:p-0 border border-gray-100 shadow-sm lg:bg-transparent lg:border-none lg:shadow-none relative z-10">
           <div className="flex items-center gap-4 mb-10">
-            <span className="text-brand-green text-xs font-bold uppercase tracking-widest">
-              Frequently asked questions
-            </span>
-            <div className="h-px w-24 bg-brand-green/30" />
+            <p className="text-brand-blue text-sm font-semibold uppercase tracking-widest mb-4">
+              Frequently asked questions —
+            </p>
           </div>
 
           <Accordion type="single" collapsible className="w-full mb-10">
