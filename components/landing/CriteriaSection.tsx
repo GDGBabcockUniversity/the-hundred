@@ -8,7 +8,7 @@ export function CriteriaSection() {
     { name: "Entrepreneurship", color: "bg-brand-blue" },
     { name: "Media & Communication", color: "bg-brand-red" },
     { name: "Design & Creative Practice", color: "bg-brand-amber" },
-    { name: "Research & Though Leadership", color: "bg-brand-green" },
+    { name: "Research & Thought Leadership", color: "bg-brand-green" },
     { name: "Service & Volunteering", color: "bg-brand-red" },
     { name: "Problem Solving", color: "bg-brand-green" },
     { name: "Emerging Talent", color: "bg-brand-amber" },
