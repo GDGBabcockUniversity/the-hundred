@@ -7,10 +7,8 @@ export default function NominatePage() {
       {/* Hero Section */}
       <section className="bg-[#fdfbf7] pt-40 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="max-w-3xl mx-auto text-center relative z-10">
-          <h1 className="text-4xl md:text-6xl font-serif text-brand-navy mb-6">
-            Nominate someone
-            <br />
-            shaping <span className="italic font-light">Babcock.</span>
+          <h1 className="text-4xl md:text-6xl font-serif font-bold leading-snug text-brand-navy mb-6">
+            Nominate someone shaping Babcock
           </h1>
           <p className="text-gray-600 mb-8 max-w-xl mx-auto">
             You are about to nominate an individual for the 100 most impactful
@@ -22,6 +20,10 @@ export default function NominatePage() {
               Start Nomination <ArrowRight className="ml-2 w-4 h-4" />
             </button>
           </div>
+
+          <p className="text-brand-red font-medium mt-6">
+            Nominations close June 20th, 2026
+          </p>
         </div>
 
         {/* Giant background text */}
@@ -37,7 +39,7 @@ export default function NominatePage() {
 
       {/* Wizard Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <NominationWizard />
         </div>
       </section>
