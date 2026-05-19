@@ -1,6 +1,13 @@
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { ArrowRight } from "lucide-react";
 
 export function Step1About({ onNext }: { onNext: () => void }) {
@@ -78,19 +85,46 @@ export function Step1About({ onNext }: { onNext: () => void }) {
           </div>
         </div>
 
-        <div className="space-y-2">
-          <Label
-            htmlFor="email"
-            className="text-xs text-gray-500 uppercase tracking-wider font-semibold"
-          >
-            School Email Address <span className="text-brand-red">*</span>
-          </Label>
-          <Input
-            id="email"
-            type="email"
-            placeholder="e.g. john@babcock.edu.ng"
-            className="h-12 bg-gray-50/50 border-gray-200"
-          />
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="space-y-2">
+            <Label
+              htmlFor="level"
+              className="text-xs text-gray-500 uppercase tracking-wider font-semibold"
+            >
+              Level <span className="text-brand-red">*</span>
+            </Label>
+            <Select>
+              <SelectTrigger
+                id="level"
+                className="bg-gray-50/50 border-gray-200 w-full"
+              >
+                <SelectValue placeholder="Select level..." />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="100L">100L</SelectItem>
+                <SelectItem value="200L">200L</SelectItem>
+                <SelectItem value="300L">300L</SelectItem>
+                <SelectItem value="400L">400L</SelectItem>
+                <SelectItem value="500L">500L</SelectItem>
+                <SelectItem value="Postgraduate">Postgraduate</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+
+          <div className="space-y-2">
+            <Label
+              htmlFor="email"
+              className="text-xs text-gray-500 uppercase tracking-wider font-semibold"
+            >
+              School Email Address <span className="text-brand-red">*</span>
+            </Label>
+            <Input
+              id="email"
+              type="email"
+              placeholder="e.g. john@babcock.edu.ng"
+              className="h-12 bg-gray-50/50 border-gray-200"
+            />
+          </div>
         </div>
 
         <div className="pt-8 flex justify-end">
