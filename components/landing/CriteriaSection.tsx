@@ -22,7 +22,8 @@ export function CriteriaSection() {
             RECOGNITION AREAS —
           </p>
           <h2 className="font-bold text-4xl md:text-5xl font-serif text-brand-navy leading-snug">
-            Ten ways to be part of the class
+            Ten ways to be part of the{" "}
+            <span className="text-brand-navy/50 italic font-bold">class</span>
           </h2>
         </div>
 
