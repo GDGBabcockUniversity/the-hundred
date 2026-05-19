@@ -1,4 +1,5 @@
-import { Eye, Brain, Network } from "lucide-react";
+import Image from "next/image";
+import { Play } from "lucide-react";
 
 export function DarkFeaturesSection() {
   return (
@@ -18,8 +19,11 @@ export function DarkFeaturesSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 border-l border-white/10">
           {/* Feature 1 */}
-          <div className="relative pl-8 border-l-2 border-brand-blue group">
-            <div className="absolute -left-1.5 top-0 w-3 h-3 rounded-full bg-brand-blue" />
+          <div className="relative pl-10 border-l-2 border-brand-blue group">
+            <div className="absolute left-1 top-0 flex items-center gap-0.5 text-brand-blue">
+              <div className="w-[2px] h-5 bg-current" />
+              <Play className="w-5 h-5 fill-current" />
+            </div>
             <h3 className="text-2xl font-serif mb-4 flex items-center gap-3">
               Visibility
             </h3>
@@ -28,12 +32,20 @@ export function DarkFeaturesSection() {
               receiving formal recognition. The 100 makes that work visible and
               legibel to the wider community.
             </p>
-            <Eye className="w-16 h-16 text-brand-blue transition-colors stroke-1" />
+            <Image
+              src="/visibility-icon.png"
+              alt="Visibility"
+              width={64}
+              height={64}
+              className="w-60 h-60 object-contain"
+            />
           </div>
 
-          {/* Feature 2 */}
-          <div className="relative pl-8 border-l-2 border-brand-red group md:border-l-0 md:pl-0 md:before:content-[''] md:before:absolute md:before:-left-6 md:before:top-0 md:before:w-0.5 md:before:h-full md:before:bg-brand-red">
-            <div className="absolute -left-1.5 top-0 w-3 h-3 rounded-full bg-brand-red md:-left-5.5" />
+          <div className="relative pl-10 border-l-2 border-brand-red group">
+            <div className="absolute left-1 top-0 flex items-center gap-0.5 text-brand-red">
+              <div className="w-[2px] h-5 bg-current" />
+              <Play className="w-5 h-5 fill-current" />
+            </div>
             <h3 className="text-2xl font-serif mb-4 flex items-center gap-3">
               Memory
             </h3>
@@ -42,12 +54,20 @@ export function DarkFeaturesSection() {
               a living archive — a record that persists long after a student has
               graduated.
             </p>
-            <Brain className="w-16 h-16 text-brand-red transition-colors stroke-1" />
+            <Image
+              src="/memory-icon.png"
+              alt="Memory"
+              width={64}
+              height={64}
+              className="w-60 h-60 object-contain"
+            />
           </div>
 
-          {/* Feature 3 */}
-          <div className="relative pl-8 border-l-2 border-brand-green group md:border-l-0 md:pl-0 md:before:content-[''] md:before:absolute md:before:-left-6 md:before:top-0 md:before:w-0.5 md:before:h-full md:before:bg-brand-green">
-            <div className="absolute -left-1.5 top-0 w-3 h-3 rounded-full bg-brand-green md:-left-5.5" />
+          <div className="relative pl-10 border-l-2 border-brand-green group">
+            <div className="absolute left-1 top-0 flex items-center gap-0.5 text-brand-green">
+              <div className="w-[2px] h-5 bg-current" />
+              <Play className="w-5 h-5 fill-current" />
+            </div>
             <h3 className="text-2xl font-serif mb-4 flex items-center gap-3">
               Culture
             </h3>
@@ -56,7 +76,13 @@ export function DarkFeaturesSection() {
               it creates a stronger campus culture — one that values doing over
               performing.
             </p>
-            <Network className="w-16 h-16 text-brand-green transition-colors stroke-1" />
+            <Image
+              src="/culture-icon.png"
+              alt="Culture"
+              width={64}
+              height={64}
+              className="w-60 h-60 object-contain"
+            />
           </div>
         </div>
       </div>
