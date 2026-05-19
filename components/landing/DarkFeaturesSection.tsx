@@ -9,7 +9,10 @@ export function DarkFeaturesSection() {
             WHY IT MATTERS —
           </p>
           <h2 className="text-4xl md:text-5xl font-serif text-white leading-snug mb-6 font-bold">
-            Because good work deserves a public record
+            Because good work deserves a{" "}
+            <span className="text-gray-500 italic font-bold">
+              public record
+            </span>
           </h2>
         </div>
 
