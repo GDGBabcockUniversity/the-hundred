@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "../ui/button";
 import { cn } from "@/lib/utils";
+import { PAGES } from "@/lib/constants";
 
 export function ValuePropSection() {
   const stats = [
@@ -32,7 +33,7 @@ export function ValuePropSection() {
   ];
 
   return (
-    <section className="bg-white py-24 px-4 sm:px-6 lg:px-8">
+    <section id="about" className="bg-white py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
         <div className="max-w-xl">
           <p className="text-brand-red text-sm font-semibold uppercase tracking-widest mb-4">
@@ -67,7 +68,7 @@ export function ValuePropSection() {
             className="rounded-2xl border-gray-300 text-brand-navy hover:bg-gray-50 h-12 px-8 text-base"
           >
             <Link
-              href="#methodology"
+              href={PAGES.methodology}
               className="inline-flex items-center text-sm font-semibold text-brand-navy hover:text-brand-blue transition-colors group"
             >
               See how selection works
