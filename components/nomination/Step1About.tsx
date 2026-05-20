@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
@@ -9,8 +10,47 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { ArrowRight } from "lucide-react";
+import type { NominationFormData } from "@/lib/types";
 
-export function Step1About({ onNext }: { onNext: () => void }) {
+interface Step1AboutProps {
+  formData: NominationFormData;
+  updateFormData: (updates: Partial<NominationFormData>) => void;
+  onNext: () => void;
+}
+
+export function Step1About({
+  formData,
+  updateFormData,
+  onNext,
+}: Step1AboutProps) {
+  const [errors, setErrors] = useState<Record<string, string>>({});
+
+  const validate = (): boolean => {
+    const newErrors: Record<string, string> = {};
+
+    if (!formData.firstName.trim())
+      newErrors.firstName = "First name is required";
+    if (!formData.lastName.trim()) newErrors.lastName = "Last name is required";
+    if (!formData.school.trim()) newErrors.school = "School is required";
+    if (!formData.department.trim())
+      newErrors.department = "Department is required";
+    if (!formData.level) newErrors.level = "Level is required";
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email.trim())) {
+      newErrors.email = "Enter a valid email address";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleContinue = () => {
+    if (validate()) {
+      onNext();
+    }
+  };
+
   return (
     <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
       <div className="mb-8">
@@ -21,8 +61,8 @@ export function Step1About({ onNext }: { onNext: () => void }) {
           About the nominee
         </h2>
         <p className="text-gray-500 text-sm">
-          Tell us who you are nominating. This is how we'll identify and contact
-          them if they're shortlisted.
+          Tell us who you are nominating. This is how we&apos;ll identify and
+          contact them if they&apos;re shortlisted.
         </p>
       </div>
 
@@ -39,7 +79,12 @@ export function Step1About({ onNext }: { onNext: () => void }) {
               id="firstName"
               placeholder="e.g. John"
               className="h-12 bg-gray-50/50 border-gray-200"
+              value={formData.firstName}
+              onChange={(e) => updateFormData({ firstName: e.target.value })}
             />
+            {errors.firstName && (
+              <p className="text-xs text-brand-red">{errors.firstName}</p>
+            )}
           </div>
           <div className="space-y-2">
             <Label
@@ -52,7 +97,12 @@ export function Step1About({ onNext }: { onNext: () => void }) {
               id="lastName"
               placeholder="e.g. Doe"
               className="h-12 bg-gray-50/50 border-gray-200"
+              value={formData.lastName}
+              onChange={(e) => updateFormData({ lastName: e.target.value })}
             />
+            {errors.lastName && (
+              <p className="text-xs text-brand-red">{errors.lastName}</p>
+            )}
           </div>
         </div>
 
@@ -68,7 +118,12 @@ export function Step1About({ onNext }: { onNext: () => void }) {
               id="school"
               placeholder="e.g. School of Computing"
               className="h-12 bg-gray-50/50 border-gray-200"
+              value={formData.school}
+              onChange={(e) => updateFormData({ school: e.target.value })}
             />
+            {errors.school && (
+              <p className="text-xs text-brand-red">{errors.school}</p>
+            )}
           </div>
           <div className="space-y-2">
             <Label
@@ -81,7 +136,12 @@ export function Step1About({ onNext }: { onNext: () => void }) {
               id="department"
               placeholder="e.g. Computer Science"
               className="h-12 bg-gray-50/50 border-gray-200"
+              value={formData.department}
+              onChange={(e) => updateFormData({ department: e.target.value })}
             />
+            {errors.department && (
+              <p className="text-xs text-brand-red">{errors.department}</p>
+            )}
           </div>
         </div>
 
@@ -93,7 +153,10 @@ export function Step1About({ onNext }: { onNext: () => void }) {
             >
               Level <span className="text-brand-red">*</span>
             </Label>
-            <Select>
+            <Select
+              value={formData.level}
+              onValueChange={(value) => updateFormData({ level: value })}
+            >
               <SelectTrigger
                 id="level"
                 className="bg-gray-50/50 border-gray-200 w-full"
@@ -109,6 +172,9 @@ export function Step1About({ onNext }: { onNext: () => void }) {
                 <SelectItem value="Postgraduate">Postgraduate</SelectItem>
               </SelectContent>
             </Select>
+            {errors.level && (
+              <p className="text-xs text-brand-red">{errors.level}</p>
+            )}
           </div>
 
           <div className="space-y-2">
@@ -123,13 +189,18 @@ export function Step1About({ onNext }: { onNext: () => void }) {
               type="email"
               placeholder="e.g. john@babcock.edu.ng"
               className="h-12 bg-gray-50/50 border-gray-200"
+              value={formData.email}
+              onChange={(e) => updateFormData({ email: e.target.value })}
             />
+            {errors.email && (
+              <p className="text-xs text-brand-red">{errors.email}</p>
+            )}
           </div>
         </div>
 
         <div className="pt-8 flex justify-end">
           <Button
-            onClick={onNext}
+            onClick={handleContinue}
             className="rounded-xl bg-brand-navy text-white hover:bg-brand-navy/90 h-12 px-8"
           >
             Continue
