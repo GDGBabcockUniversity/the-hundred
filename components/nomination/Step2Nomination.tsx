@@ -5,27 +5,54 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, ArrowLeft } from "lucide-react";
 import { RECOGNITION_AREAS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
+import type { NominationFormData } from "@/lib/types";
 
-export function Step2Nomination({
-  onNext,
-  onPrev,
-}: {
+interface Step2NominationProps {
+  formData: NominationFormData;
+  updateFormData: (updates: Partial<NominationFormData>) => void;
   onNext: () => void;
   onPrev: () => void;
-}) {
-  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+}
+
+export function Step2Nomination({
+  formData,
+  updateFormData,
+  onNext,
+  onPrev,
+}: Step2NominationProps) {
+  const [errors, setErrors] = useState<Record<string, string>>({});
 
   const toggleCategory = (cat: string) => {
-    setSelectedCategories((prev) => {
-      if (prev.includes(cat)) {
-        return prev.filter((c) => c !== cat);
-      }
-      if (prev.length < 2) {
-        return [...prev, cat];
-      }
-      return prev;
-    });
+    const current = formData.categories;
+    if (current.includes(cat)) {
+      updateFormData({ categories: current.filter((c) => c !== cat) });
+    } else if (current.length < 2) {
+      updateFormData({ categories: [...current, cat] });
+    }
   };
+
+  const getWordCount = (text: string) =>
+    text.trim().split(/\s+/).filter(Boolean).length;
+
+  const validate = (): boolean => {
+    const newErrors: Record<string, string> = {};
+    if (formData.categories.length === 0)
+      newErrors.categories = "Select at least one recognition area";
+    const wc = getWordCount(formData.reason);
+    if (!formData.reason.trim())
+      newErrors.reason = "A nomination reason is required";
+    else if (wc < 100)
+      newErrors.reason = `Minimum 100 words required (currently ${wc})`;
+    else if (wc > 300)
+      newErrors.reason = `Maximum 300 words allowed (currently ${wc})`;
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleContinue = () => {
+    if (validate()) onNext();
+  };
+  const wordCount = getWordCount(formData.reason);
 
   return (
     <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
@@ -53,11 +80,7 @@ export function Step2Nomination({
                 key={cat}
                 onClick={() => toggleCategory(cat)}
                 className={cn(
-                  `px-4 py-2 rounded-md text-xs font-medium border transition-colors ${
-                    selectedCategories.includes(cat)
-                      ? "bg-brand-green/10 border-brand-green text-brand-green"
-                      : "bg-white border-gray-200 text-gray-600 hover:border-brand-green/50"
-                  }`,
+                  `px-4 py-2 rounded-md text-xs font-medium border transition-colors ${formData.categories.includes(cat) ? "bg-brand-green/10 border-brand-green text-brand-green" : "bg-white border-gray-200 text-gray-600 hover:border-brand-green/50"}`,
                   "cursor-pointer",
                 )}
               >
@@ -65,6 +88,9 @@ export function Step2Nomination({
               </button>
             ))}
           </div>
+          {errors.categories && (
+            <p className="text-xs text-brand-red">{errors.categories}</p>
+          )}
         </div>
 
         <div className="space-y-2">
@@ -76,14 +102,32 @@ export function Step2Nomination({
             Founding Class? <span className="text-brand-red">*</span>
           </Label>
           <p className="text-xs text-gray-400 mb-2">
-            What have they done? What's the impact? What makes them stand out? ·
-            Minimum 100 words. Maximum 300 words.
+            What have they done? What&apos;s the impact? What makes them stand
+            out? · Minimum 100 words. Maximum 300 words.
           </p>
           <Textarea
             id="reason"
             placeholder="Tell us about their contribution..."
             className="min-h-[150px] bg-gray-50/50 border-gray-200 resize-none"
+            value={formData.reason}
+            onChange={(e) => updateFormData({ reason: e.target.value })}
           />
+          <div className="flex items-center justify-between">
+            {errors.reason ? (
+              <p className="text-xs text-brand-red">{errors.reason}</p>
+            ) : (
+              <span />
+            )}
+            <p
+              className={cn("text-xs", {
+                "text-gray-400": wordCount >= 100 && wordCount <= 300,
+                "text-brand-amber": wordCount > 0 && wordCount < 100,
+                "text-brand-red": wordCount > 300,
+              })}
+            >
+              {wordCount}/300 words
+            </p>
+          </div>
         </div>
 
         <div className="space-y-2">
@@ -101,6 +145,8 @@ export function Step2Nomination({
             id="evidence"
             placeholder="Paste links here..."
             className="min-h-[150px] bg-gray-50/50 border-gray-200 resize-none"
+            value={formData.evidence}
+            onChange={(e) => updateFormData({ evidence: e.target.value })}
           />
         </div>
 
@@ -114,7 +160,7 @@ export function Step2Nomination({
             Back
           </Button>
           <Button
-            onClick={onNext}
+            onClick={handleContinue}
             className="rounded-xl bg-brand-navy text-white hover:bg-brand-navy/90 h-12 px-8"
           >
             Continue
