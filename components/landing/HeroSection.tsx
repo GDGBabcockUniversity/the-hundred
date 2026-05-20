@@ -32,7 +32,7 @@ export function HeroSection() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
         <div className="max-w-2xl">
           <p className="text-brand-blue font-medium mb-4 text-sm uppercase tracking-wider">
-            — GDG ON CAMPUS BABCOCK • 2026 EDITION
+            — BABCOCK UNIVERSITY• FOUNDING CLASS
           </p>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif text-brand-navy leading-snug mb-8 font-extrabold">
             Recognizing 100 students
