@@ -70,7 +70,7 @@ export function HeroSection() {
               variant="outline"
               className="rounded-2xl border-gray-300 text-brand-navy hover:bg-gray-50 h-12 px-8 text-base"
             >
-              <Link href="#methodology">View Methodology</Link>
+              <Link href={PAGES.methodology}>View Methodology</Link>
             </Button>
           </div>
         </div>
