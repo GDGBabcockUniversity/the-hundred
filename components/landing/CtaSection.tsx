@@ -37,7 +37,7 @@ export function CtaSection() {
           </h2>
           <p className="text-brand-gray-light mb-10 max-w-2xl mx-auto text-lg">
             Nominations are now open. The process takes about ten minutes and
-            requires specific, evidenced information about the nominee's
+            requires specific, evidenced information about the nominee&apos;s
             contribution.
           </p>
           <Button
