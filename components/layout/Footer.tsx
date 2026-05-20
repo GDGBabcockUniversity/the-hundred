@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { IMAGES, SOCIAL_LINKS } from "@/lib/constants";
+import { IMAGES, PAGES, SOCIAL_LINKS } from "@/lib/constants";
 import { FaXTwitter, FaLinkedin, FaInstagram, FaTiktok } from "react-icons/fa6";
 
 const iconMap = {
@@ -36,7 +36,7 @@ export function Footer() {
               <ul className="flex flex-wrap items-center gap-4 text-sm text-gray-300">
                 <li>
                   <Link
-                    href="#about"
+                    href="/#about"
                     className="hover:text-white transition-colors"
                   >
                     About
@@ -44,7 +44,7 @@ export function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="#methodology"
+                    href={PAGES.methodology}
                     className="hover:text-white transition-colors"
                   >
                     Methodology
@@ -52,7 +52,7 @@ export function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="#the-class"
+                    href="/#the-class"
                     className="hover:text-white transition-colors"
                   >
                     The Class
@@ -60,7 +60,7 @@ export function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="#faq"
+                    href="/#faq"
                     className="hover:text-white transition-colors"
                   >
                     FAQ
