@@ -16,9 +16,12 @@ export default function NominatePage() {
             reason for why they deserve to be seen.
           </p>
           <div className="flex justify-center">
-            <button className="inline-flex items-center justify-center rounded-full bg-brand-navy text-white h-12 px-8 text-base font-medium hover:bg-brand-navy/90 transition-colors">
+            <a
+              href="#nomination-form"
+              className="inline-flex items-center justify-center rounded-full bg-brand-navy text-white h-12 px-8 text-base font-medium hover:bg-brand-navy/90 transition-colors"
+            >
               Start Nomination <ArrowRight className="ml-2 w-4 h-4" />
-            </button>
+            </a>
           </div>
 
           <p className="text-brand-red font-medium mt-6">
@@ -38,7 +41,10 @@ export default function NominatePage() {
       </section>
 
       {/* Wizard Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section
+        id="nomination-form"
+        className="py-16 px-4 sm:px-6 lg:px-8 scroll-mt-8"
+      >
         <div className="max-w-5xl mx-auto">
           <NominationWizard />
         </div>
