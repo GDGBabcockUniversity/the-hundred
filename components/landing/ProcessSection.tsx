@@ -75,7 +75,10 @@ export function ProcessSection() {
   ];
 
   return (
-    <section className="bg-[#fdfbf7] py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <section
+      id="faq"
+      className="bg-[#fdfbf7] py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden"
+    >
       {/* Decorative vectors */}
       {/* <div className="absolute -top-10 -right-10 pointer-events-none select-none z-0">
         <Image
