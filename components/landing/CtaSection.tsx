@@ -5,7 +5,10 @@ import { IMAGES, PAGES } from "@/lib/constants";
 
 export function CtaSection() {
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-brand-navy">
+    <section
+      id="nominations"
+      className="py-16 px-4 sm:px-6 lg:px-8 bg-brand-navy"
+    >
       <div className="max-w-7xl mx-auto bg-white rounded-3xl p-12 md:p-20 text-center relative overflow-hidden">
         {/* Background elements placeholders */}
         <div className="absolute top-0 right-0 pointer-events-none transform translate-x-1/4 -translate-y-1/4">
