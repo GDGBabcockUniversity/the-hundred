@@ -14,6 +14,7 @@ export const IMAGES = {
 export const PAGES = {
   home: "/",
   nominate: "/nominate",
+  methodology: "/methodology",
 };
 
 export const RECOGNITION_AREAS = [
