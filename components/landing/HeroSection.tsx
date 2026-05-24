@@ -34,7 +34,7 @@ export function HeroSection() {
           <p className="text-brand-blue font-medium mb-4 text-sm uppercase tracking-wider">
             — BABCOCK UNIVERSITY • FOUNDING CLASS
           </p>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif text-brand-navy leading-snug mb-8 font-extrabold">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif text-brand-navy leading-snug mb-6 font-extrabold">
             Recognizing 100 students
             <span className="text-brand-blue/50 italic ml-3 font-bold">
               shaping
@@ -42,6 +42,15 @@ export function HeroSection() {
             <br />
             Babcock University.
           </h1>
+
+          <div className="space-y-4 mb-8 max-w-xl">
+            <p className="text-lg font-medium text-brand-blue/90 leading-relaxed">
+              One of them could be you. Or someone you know.
+            </p>
+            <p className="text-gray-600 leading-relaxed text-[15px] sm:text-base">
+              Every year, one hundred students from across Babcock — every faculty, every discipline, every year group — are selected and publicly recognized for what they actually contributed here. The people who built things, led things, created things. The ones who shaped this campus in ways that deserve to be remembered.
+            </p>
+          </div>
 
           <div className="flex flex-wrap gap-2 mb-10">
             {pills.map((pill) => (
