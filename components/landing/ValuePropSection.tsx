@@ -46,19 +46,21 @@ export function ValuePropSection() {
           </h2>
           <div className="space-y-6 text-gray-600 mb-8">
             <p>
-              The 100 is not a popularity contest. It is not an awards night, a
-              leaderboard, or a list of the most well-known students on campus.
-              It is something more deliberate than that.
+              Babcock 100 is an annual recognition platform that finds, documents,
+              and celebrates one hundred students making a real difference at
+              Babcock University. The Founding Class of 2026 is being assembled
+              now.
             </p>
             <p>
-              Each year, The 100 identifies and publicly documents one hundred
-              students whose contributions to Babcock University — through
-              leadership, innovation, service, enterprise, creativity, or impact
-              — are real, evidenced, and worth preserving.
+              There is no single story here. A musician. A researcher. An
+              entrepreneur. A community organizer. An athlete. A developer. Each
+              year, one hundred different answers to the same question: who is
+              shaping Babcock University?
             </p>
             <p>
-              The platform is founded and run by GDG on Campus Babcock, and is
-              designed to grow into an institutional archive over time.
+              The committee looks for work that is real, verifiable, and worth
+              preserving. Evidence matters. Contribution matters. The record
+              lasts.
             </p>
           </div>
 
