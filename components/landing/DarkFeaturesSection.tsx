@@ -29,9 +29,10 @@ export function DarkFeaturesSection() {
               Visibility
             </h3>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Many students contribute enormously to campus life witout ever
-              receiving formal recognition. The 100 makes that work visible and
-              legibel to the wider community.
+              If you have watched someone put in years of work that nobody
+              officially named — this is the platform that names it. The 100
+              makes meaningful contribution visible across this campus, reaching
+              beyond the department, the team, and the group chat.
             </p>
             <Image
               src={IMAGES.visibility_icon.src}
@@ -51,9 +52,11 @@ export function DarkFeaturesSection() {
               Memory
             </h3>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Contributions fade. Stories get lost. This platform is designed as
-              a living archive — a record that persists long after a student has
-              graduated.
+              Student achievements at Babcock fade fast. By graduation, so much
+              of what students built, organized, and created has already started
+              to disappear. The 100 is the attempt to hold that record, so the
+              work that happened here can still be found, read, and built on
+              years from now.
             </p>
             <Image
               src={IMAGES.memory_icon.src}
@@ -73,9 +76,10 @@ export function DarkFeaturesSection() {
               Culture
             </h3>
             <p className="text-gray-400 text-sm leading-relaxed mb-8">
-              When meaningful contribution is celebrated publicly and seriously,
-              it creates a stronger campus culture — one that values doing over
-              performing.
+              When a campus publicly celebrates its builders, researchers,
+              creators, and leaders, it tells students what this place actually
+              values. The 100 is how Babcock says: the work you did here
+              mattered.
             </p>
             <Image
               src={IMAGES.culture_icon.src}
