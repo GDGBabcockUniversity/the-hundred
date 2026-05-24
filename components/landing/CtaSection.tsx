@@ -31,17 +31,16 @@ export function CtaSection() {
         </div>
 
         <div className="relative z-10">
-          <h2 className="max-w-2xl font-bold leading-snug mx-auto text-4xl md:text-5xl font-serif text-brand-navy mb-6">
-            Know someone who{" "}
+          <h2 className="max-w-3xl font-bold leading-snug mx-auto text-4xl md:text-5xl font-serif text-brand-navy mb-6">
+            Know someone shaping Babcock who{" "}
             <span className="text-brand-navy/50 italic font-bold">
-              deserves
+              hasn’t been recognized
             </span>{" "}
-            to be seen?
+            for it? Or maybe it’s you.
           </h2>
           <p className="text-brand-gray-light mb-10 max-w-2xl mx-auto text-lg">
-            Nominations are now open. The process takes about ten minutes and
-            requires specific, evidenced information about the nominee&apos;s
-            contribution.
+            Nominations are open until June 20, 2026. The process takes under
+            ten minutes.
           </p>
           <Button
             asChild
