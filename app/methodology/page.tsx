@@ -6,7 +6,7 @@ export default function MethodologyPage() {
       colorClass: "text-brand-blue border-brand-blue",
       borderColor: "border-brand-blue/20",
       description:
-        "To what extent has the nominee influenced people, projects, systems, culture, or outcomes at Babcock?",
+        "What changed because this person was here? The committee looks for contribution with observable consequence — things built that people used, communities that grew, problems that got solved. Impact is what stayed after the work was done.",
     },
     {
       name: "Initiative",
@@ -14,7 +14,7 @@ export default function MethodologyPage() {
       colorClass: "text-brand-green border-brand-green",
       borderColor: "border-brand-green/20",
       description:
-        "How much ownership, leadership, originality, or proactive contribution did the nominee demonstrate?",
+        "Who started it? The committee pays close attention to students who built things that did not exist before they arrived. Maintaining something valuable matters too, but building from scratch carries different weight.",
     },
     {
       name: "Evidence",
@@ -22,7 +22,7 @@ export default function MethodologyPage() {
       colorClass: "text-brand-amber border-brand-amber",
       borderColor: "border-brand-amber/20",
       description:
-        "How strong and credible is the evidence supporting the nomination? Can it be independently verified?",
+        "Can it be verified? Every claim in a nomination is expected to arrive with documentation. The stronger the evidence, the stronger the nomination.",
     },
     {
       name: "Consistency",
@@ -30,7 +30,7 @@ export default function MethodologyPage() {
       colorClass: "text-brand-red border-brand-red",
       borderColor: "border-brand-red/20",
       description:
-        "Does the contribution reflect sustained effort over time, or was it a single isolated moment?",
+        "How long did it last? A single impressive moment matters less than a sustained pattern of contribution. The committee looks for students who showed up repeatedly, over time.",
     },
     {
       name: "Potential",
@@ -38,7 +38,7 @@ export default function MethodologyPage() {
       colorClass: "text-brand-blue border-brand-blue",
       borderColor: "border-brand-blue/20",
       description:
-        "Does the nominee show continuing direction, promise, or relevance beyond the current year?",
+        "Where are they going? The Founding Class of 2026 will be professionals, founders, researchers, and leaders for decades. The committee considers trajectory alongside what has already been achieved.",
     },
   ];
 
@@ -46,34 +46,34 @@ export default function MethodologyPage() {
     {
       num: "01",
       title: "Nominations Open",
-      duration: "4 weeks",
-      desc: "Nominations open campus-wide at ORBIT. Students, staff, and alumni may submit. Each requires evidence and a description of the nominee's contribution.",
+      duration: "May 26 to June 20, 2026",
+      desc: "Nominations open campus-wide on May 26. Students, staff, and faculty may all submit. Each nomination requires evidence and a specific description of the nominee’s contribution.",
     },
     {
       num: "02",
       title: "Screening",
       duration: "1 week",
-      desc: "The coordination team reviews all submissions for completeness and eligibility. Incomplete nominations may be returned for resubmission before the deadline.",
+      desc: "All submissions are reviewed for completeness and eligibility. Incomplete nominations may be returned for resubmission before the deadline.",
     },
     {
       num: "03",
       title: "Panel Review",
       duration: "3 weeks",
-      desc: "12 independent reviewers — academic staff, student reps, alumni — score each nomination against the five criteria. Review is blind where possible.",
+      desc: "A five-member committee scores each nomination across the five criteria. Review is independent. Committee members recuse from nominees they know personally.",
     },
     {
       num: "04",
       title: "Verification",
       duration: "2 weeks",
-      desc: "Top nominations are sent to departments for independent verification. Unverifiable claims are flagged and re-reviewed by the full panel before a final decision.",
+      desc: "Shortlisted nominations are independently verified. Claims that cannot be substantiated are reviewed by the full committee before any final decision.",
     },
   ];
 
   const fairnessCommitments = [
-    "No self-nominations without external corroboration",
-    "Panel members recuse from nominees they know personally",
-    "Results undisclosed until announcement day",
-    "No rankings — all 100 are equal",
+    "Self-nominations are accepted and reviewed identically to peer nominations.",
+    "Committee members recuse from nominees they know personally.",
+    "Results remain undisclosed until announcement day.",
+    "The class carries no rankings. All 100 are equal.",
   ];
 
   return (
@@ -100,9 +100,8 @@ export default function MethodologyPage() {
               How we select the hundred.
             </h1>
             <p className="text-gray-600 text-lg md:text-xl leading-relaxed">
-              Our process is transparent, evidence-based, and designed to ensure
-              that contribution — not reputation, connections, or popularity —
-              determines selection.
+              The 100 means something only if the process behind it is honest.
+              Here is exactly how we select the class.
             </p>
           </div>
         </div>
