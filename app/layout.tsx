@@ -3,6 +3,7 @@ import { Google_Sans_Flex } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { Analytics } from "@vercel/analytics/next";
 
 const tanPearl = localFont({
   src: "../public/fonts/tan-pearl-regular.otf",
@@ -43,6 +44,7 @@ export default function RootLayout({
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
