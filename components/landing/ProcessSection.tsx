@@ -12,35 +12,35 @@ export function ProcessSection() {
     {
       num: "01",
       title: "Nomination",
-      desc: "Anyone can nominate a student, or themselves. Nominations must include evidence and specific contribution details.",
+      desc: "Start here. Nominate a student who deserves to be in the Founding Class. You can nominate a peer, a classmate, someone from a different faculty, or yourself. Each nomination requires specific evidence and a description of what your nominee has contributed.",
       x: -509,
       y: 282,
     },
     {
       num: "02",
       title: "Screening",
-      desc: "All submissions are reviewed for completeness, eligibility, and credibility. Weak or incomplete nominations are filtered.",
+      desc: "Every submission is reviewed for completeness and verifiable evidence. Nominations that cannot be supported do not advance.",
       x: -291,
       y: 75,
     },
     {
       num: "03",
       title: "Review",
-      desc: "A committee scores each nominee across five criteria: Impact, Initiative, Evidence, Consistency, and Future Potential.",
+      desc: "A five-member committee evaluates each valid nomination across five criteria: Impact, Initiative, Evidence, Consistency, and Future Potential. Reviewers score independently.",
       x: 0,
       y: 0,
     },
     {
       num: "04",
       title: "Verification",
-      desc: "Claims are independently verified where possible. Nominees flagged for concern are reviewed carefully before inclusion.",
+      desc: "Shortlisted nominations are verified. Links are followed. References are contacted.",
       x: 291,
       y: 75,
     },
     {
       num: "05",
       title: "Final Class",
-      desc: "The final 100 are curated, profiled, and published. The class is presented as a selected cohort, not a ranked list.",
+      desc: "One hundred students. Selected from across every faculty. Published as a class, with no internal ranking.",
       x: 509,
       y: 282,
     },
@@ -48,29 +48,44 @@ export function ProcessSection() {
 
   const faqs = [
     {
-      question: "Is this a popularity contest?",
+      question: "Can I nominate myself?",
       answer:
-        "No. Selection is strictly criteria-based and decided by a committee review, not votes.",
+        "Please do. Self-nominations go through the same review as peer nominations. The committee evaluates the work and the evidence, regardless of who submitted the form. Don’t be shy about it.",
     },
     {
-      question: "Does submitting a nomination guarantee selection?",
+      question: "What happens after I submit?",
       answer:
-        "No, it enters the nominee into the screening process. All shortlisted candidates will be reviewed against our 5 criteria.",
+        "Your nomination enters screening. If it advances, it reaches the review committee. If your nominee makes the shortlist, they will be contacted directly and invited to complete a full profile. Every valid nomination is reviewed.",
     },
     {
-      question: "Is there a public vote?",
+      question: "How many people can I nominate?",
       answer:
-        "No. There is zero public voting. This ensures that the selection is purely merit-based and structured.",
+        "One person per form. Fill it in again if you have more than one person in mind.",
     },
     {
-      question: "When will the final class be published?",
+      question: "Will my nominee know it was me?",
       answer:
-        "The final 100 will be published at the end of the review cycle in late June 2026.",
+        "Only if you tell them. The committee reaches out to shortlisted nominees directly.",
     },
     {
-      question: "Who is eligible to be nominated?",
+      question: "What if I don’t have formal evidence?",
       answer:
-        "Any currently enrolled undergraduate or postgraduate student at Babcock University is eligible.",
+        "Evidence takes many forms. Event records, social media where the work is visible, a faculty reference, photographs, meeting documentation — if the contribution is real, something verifiable exists. Start with what you have.",
+    },
+    {
+      question: "Who makes the final selection?",
+      answer:
+        "A five-member committee: one faculty anchor, one cross-campus student representative from outside GDG, one independent administrative or faculty member, one external industry observer, and one organizing lead in a non-voting chair capacity. Majority vote. No single person decides.",
+    },
+    {
+      question: "What if a committee member knows my nominee personally?",
+      answer:
+        "They step back from that specific evaluation.",
+    },
+    {
+      question: "When is the class announced?",
+      answer:
+        "Mid-July 2026, ahead of graduation.",
     },
   ];
 
@@ -117,7 +132,7 @@ export function ProcessSection() {
 
         <div className="hidden lg:block relative mb-20 h-[480px] max-w-5xl mx-auto z-10">
           {/* The Thick Grey Dome (Extends downwards behind FAQ) */}
-          <div className="absolute top-[170px] left-1/2 -translate-x-1/2 w-[1060px] h-[1060px] rounded-full border-32 border-gray-200/50 bg-white -z-20 shadow-[0_0_40px_rgba(0,0,0,0.02)]" />
+          <div className="absolute top-[170px] left-1/2 -translate-x-1/2 w-[1060px] h-[1350px] rounded-[530px] border-32 border-gray-200/50 bg-white -z-20 shadow-[0_0_40px_rgba(0,0,0,0.02)]" />
 
           {/* The Blue Arc */}
           <div
