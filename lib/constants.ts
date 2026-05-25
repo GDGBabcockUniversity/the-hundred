@@ -19,14 +19,14 @@ export const PAGES = {
 
 export const RECOGNITION_AREAS = [
   "Leadership",
-  "Community Building",
-  "Innovation",
-  "Entrepreneurship",
-  "Media & Communication",
-  "Design & Creative Practice",
-  "Research & Thought Leadership",
-  "Service & Volunteering",
-  "Problem Solving",
+  "Entrepreneurship and Enterprise",
+  "Arts and Performance",
+  "Media and Storytelling",
+  "Research and Scholarship",
+  "Innovation and Problem Solving",
+  "Community Building and Service",
+  "Athletics and Sports",
+  "Health and Social Impact",
   "Emerging Talent",
 ] as const;
 
