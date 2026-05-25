@@ -169,6 +169,7 @@ export function Step1About({
                 <SelectItem value="300L">300L</SelectItem>
                 <SelectItem value="400L">400L</SelectItem>
                 <SelectItem value="500L">500L</SelectItem>
+                <SelectItem value="600L">600L</SelectItem>
                 <SelectItem value="Postgraduate">Postgraduate</SelectItem>
               </SelectContent>
             </Select>
