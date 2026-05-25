@@ -41,10 +41,10 @@ export function Step2Nomination({
     const wc = getWordCount(formData.reason);
     if (!formData.reason.trim())
       newErrors.reason = "A nomination reason is required";
-    else if (wc < 100)
-      newErrors.reason = `Minimum 100 words required (currently ${wc})`;
-    else if (wc > 300)
-      newErrors.reason = `Maximum 300 words allowed (currently ${wc})`;
+    else if (wc < 30)
+      newErrors.reason = `Minimum 30 words required (currently ${wc})`;
+    else if (wc > 100)
+      newErrors.reason = `Maximum 100 words allowed (currently ${wc})`;
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -103,7 +103,7 @@ export function Step2Nomination({
           </Label>
           <p className="text-xs text-gray-400 mb-2">
             What have they done? What&apos;s the impact? What makes them stand
-            out? · Minimum 100 words. Maximum 300 words.
+            out? · Minimum 30 words. Maximum 100 words.
           </p>
           <Textarea
             id="reason"
@@ -120,12 +120,12 @@ export function Step2Nomination({
             )}
             <p
               className={cn("text-xs", {
-                "text-gray-400": wordCount >= 100 && wordCount <= 300,
+                "text-gray-400": wordCount >= 30 && wordCount <= 100,
                 "text-brand-amber": wordCount > 0 && wordCount < 100,
-                "text-brand-red": wordCount > 300,
+                "text-brand-red": wordCount > 100,
               })}
             >
-              {wordCount}/300 words
+              {wordCount}/100 words
             </p>
           </div>
         </div>
