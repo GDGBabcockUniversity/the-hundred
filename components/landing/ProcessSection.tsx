@@ -68,6 +68,11 @@ export function ProcessSection() {
         "Only if you tell them. The committee reaches out to shortlisted nominees directly.",
     },
     {
+      question: "Do the number of nominations matter?",
+      answer:
+        "No. The number of nominations a student receives does not affect their chances of being selected. Each nomination is evaluated independently based on the criteria and evidence provided.",
+    },
+    {
       question: "What if I don’t have formal evidence?",
       answer:
         "Evidence takes many forms. Event records, social media where the work is visible, a faculty reference, photographs, meeting documentation — if the contribution is real, something verifiable exists. Start with what you have.",
