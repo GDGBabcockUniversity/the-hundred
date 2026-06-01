@@ -1,5 +1,6 @@
 export const IMAGES = {
   gdg_logo: { src: "/gdg-logo.png", w: 390, h: 390 },
+  babcock_logo: { src: "/babcock-logo.png", w: 188, h: 85 },
   cta_stack: { src: "/cta-stack.png", w: 287, h: 274 },
   cta_star: { src: "/cta-star.png", w: 289, h: 242 },
   culture_icon: { src: "/culture-icon.png", w: 566, h: 641 },
