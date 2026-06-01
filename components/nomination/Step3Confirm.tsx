@@ -35,7 +35,7 @@ export function Step3Confirm({
           STEP 3 —
         </p>
         <h2 className="text-3xl font-serif text-brand-navy mb-2 font-semibold">
-          Confirm and submit
+          Confirm and submit.
         </h2>
         <p className="text-gray-500 text-sm">
           Please read and confirm the following before submitting your
@@ -153,7 +153,7 @@ export function Step3Confirm({
         <Button
           onClick={onSubmit}
           disabled={!allChecked || isSubmitting}
-          className="w-full rounded-xl bg-brand-navy text-white hover:bg-brand-navy/90 h-12 px-12 mb-4 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full rounded-xl bg-[#B28200] text-white hover:bg-[#B28200]/90 h-12 px-12 mb-4 disabled:opacity-50 disabled:cursor-not-allowed font-semibold"
         >
           {isSubmitting ? (
             <>
