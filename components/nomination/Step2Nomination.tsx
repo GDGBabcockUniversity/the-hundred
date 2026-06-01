@@ -61,7 +61,7 @@ export function Step2Nomination({
           STEP 2 —
         </p>
         <h2 className="text-3xl font-serif text-brand-navy mb-2 font-semibold">
-          The nomination
+          The nomination.
         </h2>
         <p className="text-gray-500 text-sm">
           Tell us why this person should be selected for the Founding Class.
@@ -108,7 +108,7 @@ export function Step2Nomination({
           <Textarea
             id="reason"
             placeholder="Tell us about their contribution..."
-            className="min-h-[150px] bg-gray-50/50 border-gray-200 resize-none"
+            className="min-h-37.5 bg-gray-50/50 border-gray-200 resize-none"
             value={formData.reason}
             onChange={(e) => updateFormData({ reason: e.target.value })}
           />
@@ -144,7 +144,7 @@ export function Step2Nomination({
           <Textarea
             id="evidence"
             placeholder="Paste links here..."
-            className="min-h-[150px] bg-gray-50/50 border-gray-200 resize-none"
+            className="min-h-37.5 bg-gray-50/50 border-gray-200 resize-none"
             value={formData.evidence}
             onChange={(e) => updateFormData({ evidence: e.target.value })}
           />
@@ -161,9 +161,9 @@ export function Step2Nomination({
           </Button>
           <Button
             onClick={handleContinue}
-            className="rounded-xl bg-brand-navy text-white hover:bg-brand-navy/90 h-12 px-8"
+            className="rounded-xl bg-[#B28200] text-white hover:bg-[#B28200]/90 h-12 px-8"
           >
-            Continue
+            Review Submission
             <ArrowRight className="ml-2 w-4 h-4" />
           </Button>
         </div>
