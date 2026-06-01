@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
 import { IMAGES, PAGES } from "@/lib/constants";
 
 export function CtaSection() {
@@ -9,9 +9,9 @@ export function CtaSection() {
       id="nominations"
       className="py-16 px-4 sm:px-6 lg:px-8 bg-brand-navy"
     >
-      <div className="max-w-7xl mx-auto bg-white rounded-3xl p-12 md:p-20 text-center relative overflow-hidden">
-        {/* Background elements placeholders */}
-        <div className="absolute top-0 right-0 pointer-events-none transform translate-x-1/4 -translate-y-1/4">
+      <div className="max-w-6xl mx-auto bg-[#f0f2f5] rounded-[24px] p-8 sm:p-12 md:p-24 text-center relative overflow-hidden">
+        {/* Background elements */}
+        <div className="absolute top-0 right-0 pointer-events-none transform translate-x-[10%] translate-y-[-10%] opacity-80 hidden sm:block">
           <Image
             src={IMAGES.cta_stack.src}
             alt="CTA Stack"
@@ -20,7 +20,7 @@ export function CtaSection() {
             className="w-32 h-32 md:w-64 md:h-64 object-contain"
           />
         </div>
-        <div className="absolute bottom-0 left-0 pointer-events-none transform -translate-x-1/4 translate-y-1/4">
+        <div className="absolute bottom-0 left-0 pointer-events-none transform translate-x-[-10%] translate-y-[10%] opacity-80 hidden sm:block">
           <Image
             src={IMAGES.cta_star.src}
             alt="CTA Star"
@@ -30,23 +30,22 @@ export function CtaSection() {
           />
         </div>
 
-        <div className="relative z-10">
-          <h2 className="max-w-3xl font-bold leading-snug mx-auto text-4xl md:text-5xl font-serif text-brand-navy mb-6">
-            Know someone shaping Babcock who{" "}
-            <span className="text-brand-navy/50 italic font-bold">
-              hasn’t been recognized
-            </span>{" "}
-            for it? Or maybe it’s you.
+        <div className="relative z-10 flex flex-col items-center">
+          <h2 className="max-w-3xl font-bold leading-[1.1] mx-auto text-4xl sm:text-5xl md:text-6xl font-serif text-brand-navy mb-6">
+            Know someone who <br />
+            <span className="text-[#B28200]">deserves</span>
+            <br />
+            to be seen?
           </h2>
-          <p className="text-brand-gray-light mb-10 max-w-2xl mx-auto text-lg">
+          <p className="text-gray-700 mb-10 max-w-xl mx-auto text-sm md:text-base font-medium">
             Nominations are open until June 20, 2026. The process takes under
             ten minutes.
           </p>
           <Button
             asChild
-            className="rounded-2xl bg-brand-navy text-white hover:bg-brand-navy/90 h-12 px-8 text-base font-medium border-none"
+            className="rounded-2xl bg-brand-navy text-white hover:bg-brand-navy/90 h-12 px-8 text-[14px] font-medium border-none"
           >
-            <Link href={PAGES.nominate}>Submit a nomination</Link>
+            <Link href={PAGES.nominate}>Submit a Nomination</Link>
           </Button>
         </div>
       </div>
