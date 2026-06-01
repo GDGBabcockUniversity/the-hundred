@@ -7,12 +7,15 @@ export function DarkFeaturesSection() {
     <section className="bg-brand-navy text-white py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="mb-16 max-w-2xl">
-          <p className="text-brand-amber text-sm font-semibold uppercase tracking-widest mb-4">
-            WHY IT MATTERS —
-          </p>
+          <div className="inline-flex items-center gap-4 rounded-full border border-white/20 px-6 py-2 mb-8 bg-white/5">
+            <span className="text-[10px] font-bold text-[#D39B00] uppercase tracking-widest">
+              WHY IT MATTERS
+            </span>
+            <span className="w-12 h-px bg-white/30" />
+          </div>
           <h2 className="text-4xl md:text-5xl font-serif text-white leading-snug mb-6 font-bold">
             Because good work deserves a{" "}
-            <span className="text-gray-500 italic font-bold">
+            <span className="text-brand-amber italic font-bold">
               public record
             </span>
           </h2>
@@ -22,7 +25,7 @@ export function DarkFeaturesSection() {
           {/* Feature 1 */}
           <div className="relative pl-10 border-l-2 border-brand-blue group">
             <div className="absolute left-1 top-0 flex items-center gap-0.5 text-brand-blue">
-              <div className="w-[2px] h-5 bg-current" />
+              <div className="w-0.5 h-5 bg-current" />
               <Play className="w-5 h-5 fill-current" />
             </div>
             <h3 className="text-2xl font-serif mb-4 flex items-center gap-3">
@@ -45,7 +48,7 @@ export function DarkFeaturesSection() {
 
           <div className="relative pl-10 border-l-2 border-brand-red group">
             <div className="absolute left-1 top-0 flex items-center gap-0.5 text-brand-red">
-              <div className="w-[2px] h-5 bg-current" />
+              <div className="w-0.5 h-5 bg-current" />
               <Play className="w-5 h-5 fill-current" />
             </div>
             <h3 className="text-2xl font-serif mb-4 flex items-center gap-3">
@@ -69,7 +72,7 @@ export function DarkFeaturesSection() {
 
           <div className="relative pl-10 border-l-2 border-brand-green group">
             <div className="absolute left-1 top-0 flex items-center gap-0.5 text-brand-green">
-              <div className="w-[2px] h-5 bg-current" />
+              <div className="w-0.5 h-5 bg-current" />
               <Play className="w-5 h-5 fill-current" />
             </div>
             <h3 className="text-2xl font-serif mb-4 flex items-center gap-3">
