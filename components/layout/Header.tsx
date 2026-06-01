@@ -6,7 +6,7 @@ import { IMAGES, PAGES } from "@/lib/constants";
 
 export function Header() {
   return (
-    <header className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-7xl px-4">
+    <header className="absolute top-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-7xl px-4">
       <div className="flex items-center justify-between">
         <Link href={PAGES.home} className="flex items-center gap-2">
           <Image
