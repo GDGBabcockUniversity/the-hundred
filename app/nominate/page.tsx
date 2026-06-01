@@ -5,37 +5,65 @@ export default function NominatePage() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="bg-[#fdfbf7] pt-40 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        <div className="max-w-3xl mx-auto text-center relative z-10">
-          <h1 className="text-4xl md:text-6xl font-serif font-bold leading-snug text-brand-navy mb-6">
-            Nominate someone shaping Babcock
+      <section className="bg-[#fcfaf8] pt-32 pb-24 sm:pt-40 sm:pb-48 px-4 sm:px-6 lg:px-8 relative overflow-hidden flex flex-col items-center">
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-extrabold leading-[1.1] text-brand-navy mb-6 tracking-tight">
+            Nominate someone{" "}
+            <span className="text-[#D39B00] relative inline-block">
+              shaping
+              {/* Hand-drawn underline */}
+              <svg
+                className="absolute -bottom-1 left-0 w-full"
+                viewBox="0 0 200 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M2 8C30 3 60 2 100 6C140 10 170 5 198 4"
+                  stroke="#D39B00"
+                  strokeWidth="4"
+                  strokeLinecap="round"
+                  fill="none"
+                />
+              </svg>
+            </span>
+            <br />
+            Babcock University.
           </h1>
-          <p className="text-gray-600 mb-8 max-w-xl mx-auto">
+          <p className="text-gray-500 mb-10 max-w-2xl mx-auto text-[14px] leading-relaxed font-medium">
             You are about to nominate an individual for the 100 most impactful
             students. Please ensure you have their basic details and a clear
             reason for why they deserve to be seen.
           </p>
-          <div className="flex justify-center">
+
+          <div className="flex flex-col items-center">
             <a
               href="#nomination-form"
-              className="inline-flex items-center justify-center rounded-full bg-brand-navy text-white h-12 px-8 text-base font-medium hover:bg-brand-navy/90 transition-colors"
+              className="inline-flex items-center justify-center rounded-full bg-brand-navy text-white h-13 pl-6 pr-1.5 text-[14px] font-medium hover:bg-brand-navy/90 transition-colors shadow-sm"
             >
-              Start Nomination <ArrowRight className="ml-2 w-4 h-4" />
+              Start Nomination
+              <div className="ml-4 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-sm">
+                <ArrowRight
+                  className="w-4.5 h-4.5 text-brand-navy"
+                  strokeWidth={2.5}
+                />
+              </div>
             </a>
-          </div>
 
-          <p className="text-brand-red font-medium mt-6">
-            Nominations close June 20th, 2026
-          </p>
+            <p className="text-brand-red font-semibold text-[13px] mt-6">
+              * Nominations close June 20, 2026.
+            </p>
+          </div>
         </div>
 
-        {/* Giant background text */}
-        <div className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 opacity-5 pointer-events-none select-none w-full text-center overflow-hidden">
+        {/* Giant "Babcock 100" text at bottom */}
+        <div className="absolute bottom-0 left-0 right-0 select-none pointer-events-none overflow-hidden flex justify-center">
           <div
-            className="font-serif text-[15rem] leading-none whitespace-nowrap text-transparent"
-            style={{ WebkitTextStroke: "2px #0f1729" }}
+            className="font-serif text-brand-navy font-extrabold leading-[0.85] tracking-tight whitespace-nowrap translate-y-[25%] text-center"
+            style={{ fontSize: "16vw" }}
           >
-            BABCOCK 100
+            Babcock 100
           </div>
         </div>
       </section>
@@ -43,7 +71,7 @@ export default function NominatePage() {
       {/* Wizard Section */}
       <section
         id="nomination-form"
-        className="py-16 px-4 sm:px-6 lg:px-8 scroll-mt-8"
+        className="py-16 px-4 sm:px-6 lg:px-8 scroll-mt-8 relative z-20 bg-white"
       >
         <div className="max-w-5xl mx-auto">
           <NominationWizard />
