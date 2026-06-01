@@ -58,7 +58,7 @@ export function Step1About({
           STEP 1 —
         </p>
         <h2 className="text-3xl font-serif text-brand-navy mb-2 font-semibold">
-          About the nominee
+          About the nominee.
         </h2>
         <p className="text-gray-500 text-sm">
           Tell us who you are nominating. This is how we&apos;ll identify and
@@ -201,10 +201,11 @@ export function Step1About({
 
         <div className="pt-8 flex justify-end">
           <Button
+            type="submit"
             onClick={handleContinue}
-            className="rounded-xl bg-brand-navy text-white hover:bg-brand-navy/90 h-12 px-8"
+            className="rounded-xl bg-[#B28200] text-white hover:bg-[#B28200]/90 h-12 px-8"
           >
-            Continue
+            Continue to Nomination
             <ArrowRight className="ml-2 w-4 h-4" />
           </Button>
         </div>
