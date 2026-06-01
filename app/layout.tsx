@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
-import { Google_Sans_Flex } from "next/font/google";
-import localFont from "next/font/local";
+import { Bricolage_Grotesque, Google_Sans_Flex } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Analytics } from "@vercel/analytics/next";
 
-const tanPearl = localFont({
-  src: "../public/fonts/tan-pearl-regular.otf",
+const bricolageGrotesque = Bricolage_Grotesque({
   variable: "--font-serif",
+  subsets: ["latin"],
   display: "swap",
 });
 
@@ -35,7 +34,7 @@ export default function RootLayout({
     <html
       lang="en"
       className={cn(
-        tanPearl.variable,
+        bricolageGrotesque.variable,
         googleSansFlex.variable,
         "h-full antialiased",
       )}
