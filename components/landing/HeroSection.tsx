@@ -11,7 +11,7 @@ export function HeroSection() {
       <div className="flex items-center gap-3 mb-10">
         <span className="w-8 h-px bg-gray-300" />
         <span className="text-xs font-medium text-gray-500 uppercase tracking-[0.2em] bg-white border border-gray-200 rounded-full px-5 py-2">
-          Babcock University • Founding Class
+          Babcock 100 • Founding Class
         </span>
         <span className="w-8 h-px bg-gray-300" />
       </div>
