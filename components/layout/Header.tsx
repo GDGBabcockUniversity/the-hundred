@@ -10,11 +10,11 @@ export function Header() {
       <div className="flex items-center justify-between">
         <Link href={PAGES.home} className="flex items-center gap-2">
           <Image
-            src={IMAGES.gdg_logo.src}
+            src={IMAGES.babcock_logo.src}
             alt="GDG Logo"
-            width={IMAGES.gdg_logo.w}
-            height={IMAGES.gdg_logo.h}
-            className="w-12 h-12 object-contain"
+            width={IMAGES.babcock_logo.w}
+            height={IMAGES.babcock_logo.h}
+            className="w-40 h-auto object-contain"
           />
         </Link>
 
@@ -24,10 +24,10 @@ export function Header() {
               About
             </Link>
             <Link
-              href="/#nominations"
+              href={PAGES.methodology}
               className="text-gray-600 hover:text-gray-900"
             >
-              Nominations
+              Methodology
             </Link>
             <Link
               href="/#the-class"
