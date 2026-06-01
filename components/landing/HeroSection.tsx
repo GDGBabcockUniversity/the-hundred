@@ -1,100 +1,96 @@
+"use client";
+
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 import { PAGES } from "@/lib/constants";
-
-const pills = [
-  {
-    text: "Annual",
-    bg: "bg-brand-red",
-    textColor: "text-white",
-  },
-  {
-    text: "Cross-campus",
-    bg: "bg-brand-blue",
-    textColor: "text-white",
-  },
-  {
-    text: "Criteria-based",
-    bg: "bg-brand-amber",
-    textColor: "text-white",
-  },
-  {
-    text: "Non-ranked",
-    bg: "bg-brand-green",
-    textColor: "text-white",
-  },
-];
 
 export function HeroSection() {
   return (
-    <section className="bg-[#fdfbf7] pt-40 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden relative">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
-        <div className="max-w-2xl">
-          <p className="text-brand-blue font-medium mb-4 text-sm uppercase tracking-wider">
-            — BABCOCK UNIVERSITY • FOUNDING CLASS
-          </p>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif text-brand-navy leading-snug mb-6 font-extrabold">
-            Recognizing 100 students
-            <span className="text-brand-blue/50 italic ml-3 font-bold">
-              shaping
-            </span>
-            <br />
-            Babcock University.
-          </h1>
+    <section className="bg-[#fdfbf7] min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden relative pt-5 pb-0">
+      {/* Subtitle pill */}
+      <div className="flex items-center gap-3 mb-10">
+        <span className="w-8 h-px bg-gray-300" />
+        <span className="text-xs font-medium text-gray-500 uppercase tracking-[0.2em] bg-white border border-gray-200 rounded-full px-5 py-2">
+          Babcock University • Founding Class
+        </span>
+        <span className="w-8 h-px bg-gray-300" />
+      </div>
 
-          <div className="space-y-4 mb-8 max-w-xl">
-            <p className="text-lg font-medium text-brand-blue/90 leading-relaxed">
-              One of them could be you. Or someone you know.
-            </p>
-            <p className="text-gray-600 leading-relaxed text-[15px] sm:text-base">
-              Every year, one hundred students from across Babcock — every faculty, every discipline, every year group — are selected and publicly recognized for what they actually contributed here. The people who built things, led things, created things. The ones who shaped this campus in ways that deserve to be remembered.
-            </p>
-          </div>
-
-          <div className="flex flex-wrap gap-2 mb-10">
-            {pills.map((pill) => (
-              <span
-                key={pill.text}
-                className={cn(
-                  "px-4 py-1 rounded-sm text-sm font-medium uppercase tracking-wider",
-                  pill.bg,
-                  pill.textColor,
-                )}
-              >
-                {pill.text}
-              </span>
-            ))}
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Button
-              asChild
-              className="rounded-2xl bg-brand-navy text-white hover:bg-brand-navy/90 h-12 px-8 text-base"
-            >
-              <Link href={PAGES.nominate}>Open Nominations</Link>
-            </Button>
-            <Button
-              asChild
-              variant="outline"
-              className="rounded-2xl border-gray-300 text-brand-navy hover:bg-gray-50 h-12 px-8 text-base"
-            >
-              <Link href={PAGES.methodology}>View Methodology</Link>
-            </Button>
-          </div>
-        </div>
-
-        {/* Right side decorative text */}
-        <div className="hidden lg:block relative w-full h-full pointer-events-none select-none opacity-5">
-          <div
-            className="absolute right-0 xl:-right-10 top-1/2 -translate-y-1/2 font-serif text-[12rem] xl:text-[15rem] leading-[0.85] text-transparent text-right whitespace-nowrap"
-            style={{ WebkitTextStroke: "2px #0f1729" }}
+      {/* Main heading */}
+      <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-brand-navy leading-tight mb-10 font-extrabold text-center max-w-7xl">
+        Recognizing 100 students{" "}
+        <span className="text-brand-amber italic font-bold relative inline-block">
+          shaping
+          {/* Hand-drawn underline */}
+          <svg
+            className="absolute -bottom-1 left-0 w-full"
+            viewBox="0 0 200 12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="none"
           >
-            BABCOCK
-            <br />
-            100
-          </div>
+            <path
+              d="M2 8C30 3 60 2 100 6C140 10 170 5 198 4"
+              stroke="#f9ab00"
+              strokeWidth="3"
+              strokeLinecap="round"
+              fill="none"
+            />
+          </svg>
+        </span>
+        <br />
+        Babcock University.
+      </h1>
+
+      {/* CTA buttons */}
+      <div className="flex flex-col sm:flex-row gap-4 mb-16">
+        <Button
+          asChild
+          className="rounded-2xl bg-brand-navy text-white hover:bg-brand-navy/90 h-12 px-8 text-base font-medium"
+        >
+          <Link href={PAGES.nominate}>Open Nominations</Link>
+        </Button>
+        <Button
+          asChild
+          variant="outline"
+          className="rounded-2xl border-gray-300 text-brand-navy hover:bg-gray-50 h-12 px-8 text-base font-medium"
+        >
+          <Link href={PAGES.methodology}>View Methodology &gt;</Link>
+        </Button>
+      </div>
+
+      {/* Giant "Babcock 100" text at bottom */}
+      <div className="absolute bottom-0 left-0 right-0 select-none pointer-events-none overflow-hidden flex justify-center">
+        <div
+          className="font-serif text-brand-navy font-extrabold leading-[0.85] tracking-tight whitespace-nowrap translate-y-[25%] text-center"
+          style={{ fontSize: "16vw" }}
+        >
+          Babcock 100
         </div>
+      </div>
+
+      {/* Scroll to explore indicator */}
+      <div className="absolute right-6 bottom-8 hidden lg:flex flex-col items-center gap-2">
+        <span
+          className="text-brand-amber text-xs font-semibold uppercase tracking-widest"
+          style={{ writingMode: "vertical-rl" }}
+        >
+          Scroll to explore
+        </span>
+        <svg
+          width="12"
+          height="12"
+          viewBox="0 0 12 12"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="text-brand-amber"
+        >
+          <path
+            d="M6 0L11.196 9H0.804L6 0Z"
+            fill="currentColor"
+            transform="rotate(180 6 6)"
+          />
+        </svg>
       </div>
     </section>
   );
