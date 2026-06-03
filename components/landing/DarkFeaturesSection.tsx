@@ -33,7 +33,7 @@ export function DarkFeaturesSection() {
             </h3>
             <p className="text-gray-400 text-sm leading-relaxed">
               If you have watched someone put in years of work that nobody
-              officially named — this is the platform that names it. The 100
+              officially named. This is the platform that names it. Babcock 100
               makes meaningful contribution visible across this campus, reaching
               beyond the department, the team, and the group chat.
             </p>
@@ -57,7 +57,7 @@ export function DarkFeaturesSection() {
             <p className="text-gray-400 text-sm leading-relaxed">
               Student achievements at Babcock fade fast. By graduation, so much
               of what students built, organized, and created has already started
-              to disappear. The 100 is the attempt to hold that record, so the
+              to disappear. Babcock 100 is the attempt to hold that record, so the
               work that happened here can still be found, read, and built on
               years from now.
             </p>
@@ -81,7 +81,7 @@ export function DarkFeaturesSection() {
             <p className="text-gray-400 text-sm leading-relaxed mb-8">
               When a campus publicly celebrates its builders, researchers,
               creators, and leaders, it tells students what this place actually
-              values. The 100 is how Babcock says: the work you did here
+              values. Babcock 100 is how Babcock says: the work you did here
               mattered.
             </p>
             <Image
