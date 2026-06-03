@@ -61,14 +61,14 @@ export function CriteriaSection() {
       color: "bg-[#0A56F9]",
       icon: Users,
       description:
-        "Organizations built from nothing. Communities held together when they might have fallen apart. People who show up for others in ways that ask nothing back. You know who they are.",
+        "Organizations built from nothing. Communities held together when they might have fallen apart. People who show up for others in ways that ask nothing back.",
     },
     {
       name: "Athletics and Sports",
       color: "bg-[#B28200]",
       icon: Trophy,
       description:
-        "Competitive excellence on fields, courts, and tracks. The student who represented Babcock with distinction and brought something back. Physical achievement is real achievement.",
+        "Competitive excellence on fields, courts, and tracks. The student who represented Babcock with distinction and brought something back.",
     },
     {
       name: "Health and\nSocial Impact",
