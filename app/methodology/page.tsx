@@ -47,7 +47,7 @@ export default function MethodologyPage() {
       num: "01",
       title: "Nominations Open",
       duration: "May 26 to June 20, 2026",
-      desc: "Nominations open campus-wide on May 26. Students, staff, and faculty may all submit. Each nomination requires evidence and a specific description of the nominee’s contribution.",
+      desc: "Nominations opened May 26, 2026 and are open campus-wide for four weeks. Students, staff, and faculty may all submit. Each nomination requires evidence and a specific description of the nominee’s contribution.",
     },
     {
       num: "02",
@@ -57,56 +57,50 @@ export default function MethodologyPage() {
     },
     {
       num: "03",
-      title: "Panel Review",
+      title: "Committee Review",
       duration: "3 weeks",
-      desc: "A five-member committee scores each nomination across the five criteria. Review is independent. Committee members recuse from nominees they know personally.",
+      desc: "A five-member committee scores each nomination against the five criteria. Review is blind where possible.",
     },
     {
       num: "04",
       title: "Verification",
       duration: "2 weeks",
-      desc: "Shortlisted nominations are independently verified. Claims that cannot be substantiated are reviewed by the full committee before any final decision.",
+      desc: "Shortlisted nominations are independently verified. Claims that cannot be substantiated are flagged and re-reviewed by the full committee before a final decision.",
+    },
+    {
+      num: "05",
+      title: "Final Class",
+      duration: "1 week",
+      desc: "The final 100 are curated, profiled, and published.\n\nThe class is presented as a selected cohort, not a ranked list.",
     },
   ];
 
   const fairnessCommitments = [
-    "Self-nominations are accepted and reviewed identically to peer nominations.",
+    "Self-nominations are reviewed on the same basis as peer nominations.",
     "Committee members recuse from nominees they know personally.",
-    "Results remain undisclosed until announcement day.",
-    "The class carries no rankings. All 100 are equal.",
+    "Results are held until announcement day.",
+    "No rankings. All 100 are equal.",
   ];
 
   return (
     <div className="bg-white min-h-screen">
-      {/* Back to Home Navigation Anchor */}
-      {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-36 pb-6">
-        <Link
-          href={PAGES.home}
-          className="inline-flex items-center text-sm font-semibold text-gray-500 hover:text-brand-navy transition-colors group"
-        >
-          <ArrowLeft className="mr-2 w-4 h-4 transform group-hover:-translate-x-1 transition-transform" />
-          Back to home
-        </Link>
-      </div> */}
-
       {/* Hero Section */}
-      <section className="pb-24 px-4 sm:px-6 lg:px-8 pt-36">
-        <div className="max-w-7xl mx-auto">
+      <section className="pb-24 px-4 sm:px-6 lg:px-8 pt-36 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="max-w-3xl">
             <p className="text-brand-blue text-xs font-semibold uppercase tracking-widest mb-4">
               METHODOLOGY
             </p>
             <h1 className="text-5xl md:text-6xl font-serif text-brand-navy leading-snug mb-8 font-bold">
-              How we select the hundred.
+              How we select the class.
             </h1>
             <p className="text-gray-600 text-lg md:text-xl leading-relaxed">
-              The 100 means something only if the process behind it is honest.
-              Here is exactly how we select the class.
+              The process is transparent. Contribution, not reputation, connections, or popularity, determines selection. Here is exactly how we select the class.
             </p>
           </div>
         </div>
 
-        <div className="hidden lg:block relative w-full h-full pointer-events-none select-none opacity-5">
+        <div className="hidden lg:block absolute inset-0 pointer-events-none select-none opacity-5 overflow-hidden">
           <div
             className="absolute right-0 top-1/2 -translate-y-1/2 font-serif text-[12rem] xl:text-[15rem] leading-[0.85] text-transparent text-right whitespace-nowrap"
             style={{ WebkitTextStroke: "2px #0f1729" }}
@@ -193,7 +187,7 @@ export default function MethodologyPage() {
                   </div>
                 </div>
                 <div className="md:col-span-9">
-                  <p className="text-gray-600 text-sm md:text-base leading-relaxed">
+                  <p className="text-gray-600 text-sm md:text-base leading-relaxed whitespace-pre-line">
                     {step.desc}
                   </p>
                 </div>
@@ -219,9 +213,9 @@ export default function MethodologyPage() {
                 key={index}
                 className="border-t border-white/10 pt-6 flex flex-col justify-between h-full"
               >
-                <p className="text-gray-300 text-sm md:text-base leading-relaxed">
-                  <span className="text-brand-blue font-bold mr-2">—</span>
-                  {commitment}
+                <p className="text-gray-300 text-sm md:text-base leading-relaxed flex items-start">
+                  <span className="text-brand-blue font-bold mr-3 mt-1 text-lg leading-none">•</span>
+                  <span>{commitment}</span>
                 </p>
               </div>
             ))}
