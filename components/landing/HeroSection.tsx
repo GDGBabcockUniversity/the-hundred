@@ -18,7 +18,7 @@ export function HeroSection() {
 
       {/* Main heading */}
       <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif text-brand-navy leading-tight mb-10 font-extrabold text-center max-w-7xl">
-        Recognizing 100 students{" "}
+        The first 100 students{" "}
         <span className="text-brand-amber italic font-bold relative inline-block">
           shaping
           {/* Hand-drawn underline */}
