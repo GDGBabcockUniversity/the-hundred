@@ -56,14 +56,14 @@ export function ValuePropSection() {
         {/* Paragraphs */}
         <div className="max-w-4xl mx-auto text-center space-y-4 text-gray-500 mb-16 text-sm md:text-base leading-relaxed">
           <p>
-            The 100 is not a popularity contest. It is not an awards night, a
+            Babcock 100 is not a popularity contest. It is not an awards night, a
             leaderboard, or a list of the most well-known students on campus. It
             is something more deliberate than that.
           </p>
           <p>
-            Each year, The 100 identifies and publicly documents one hundred
-            students whose contributions to Babcock University — through
-            leadership, innovation, service, enterprise, creativity, or impact —
+            Each year, Babcock 100 identifies and publicly documents one hundred
+            students whose contributions to Babcock University, through
+            leadership, innovation, service, enterprise, creativity, or impact,
             are real, evidenced, and worth preserving.
           </p>
           <p>
