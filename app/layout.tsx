@@ -17,9 +17,9 @@ const googleSansFlex = Google_Sans_Flex({
 });
 
 export const metadata: Metadata = {
-  title: "The 100 — Babcock University",
+  title: "Babcock 100",
   description:
-    "Recognizing and celebrating the 100 most impactful students at Babcock University. Nominate a student making a difference.",
+    "Babcock 100 is an annual, cross-campus recognition platform that identifies and permanently documents 100 students shaping Babcock University. Nominations close June 20, 2026.",
 };
 
 import { Header } from "@/components/layout/Header";
