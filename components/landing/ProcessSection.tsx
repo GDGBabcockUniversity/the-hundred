@@ -26,7 +26,7 @@ export function ProcessSection() {
     {
       num: "03",
       title: "Review",
-      desc: "A committee scores each nominee across five criteria: Impact, Initiative, Evidence, Consistency, and Future Potential.",
+      desc: "A five-member committee scores each nominee across five criteria: Impact, Initiative, Evidence, Consistency, and Potential.",
       x: 0,
       y: 0,
     },
@@ -50,10 +50,10 @@ export function ProcessSection() {
     {
       question: "Is this a popularity contest?",
       answer:
-        "No. The 100 is not a popularity contest. It is not an awards night, a leaderboard, or a list of the most well-known students on campus. Selection is criteria-based and committee-reviewed.",
+        "No. Babcock 100 is not a popularity contest. It is not an awards night, a leaderboard, or a list of the most well-known students on campus. Selection is criteria-based and committee-reviewed.",
     },
     {
-      question: "Does submitting a nomination guarantee selection?",
+      question: "Does nominating someone guarantee they’ll be selected?",
       answer:
         "No. Every submission is reviewed for completeness and verifiable evidence. A five-member committee evaluates each valid nomination.",
     },
