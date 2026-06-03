@@ -32,9 +32,7 @@ export default function NominatePage() {
             Babcock University.
           </h1>
           <p className="text-gray-500 mb-10 max-w-2xl mx-auto text-[14px] leading-relaxed font-medium">
-            You are about to nominate an individual for the 100 most impactful
-            students. Please ensure you have their basic details and a clear
-            reason for why they deserve to be seen.
+            You’re about to nominate a student for Babcock 100. Have their basic details ready, and a clear reason they deserve to be seen.
           </p>
 
           <div className="flex flex-col items-center">
