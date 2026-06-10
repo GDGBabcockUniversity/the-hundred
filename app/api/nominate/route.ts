@@ -1,6 +1,8 @@
 import { google } from "googleapis";
 import { NextResponse } from "next/server";
 import type { NominationFormData } from "@/lib/types";
+import { resend } from "@/lib/services";
+import { generateNominationEmailHtml } from "@/lib/email";
 
 const SCOPES = ["https://www.googleapis.com/auth/spreadsheets"];
 
@@ -61,7 +63,7 @@ const ensureHeaders = async (
   }
 };
 
-export async function POST(request: Request) {
+export const POST = async (request: Request) => {
   try {
     const body: NominationFormData = await request.json();
 
@@ -106,6 +108,17 @@ export async function POST(request: Request) {
     // Ensure headers exist on first submission
     await ensureHeaders(sheets, spreadsheetId);
 
+    const nomineeEmail = body.email.trim();
+
+    // Fetch existing emails to check for duplicates
+    const emailResponse = await sheets.spreadsheets.values.get({
+      spreadsheetId,
+      range: "Sheet1!H:H",
+    });
+    const existingEmails =
+      emailResponse.data.values?.map((row) => row[0]) || [];
+    const isFirstTime = !existingEmails.includes(nomineeEmail);
+
     const submissionId = generateId();
     const timestamp = new Date().toLocaleString("en-NG", {
       timeZone: "Africa/Lagos",
@@ -134,6 +147,20 @@ export async function POST(request: Request) {
       requestBody: { values: [row] },
     });
 
+    if (isFirstTime) {
+      try {
+        await resend.emails.send({
+          from: "Babcock 100 <nominations@gdgbabcock.com>",
+          to: nomineeEmail,
+          subject: "Someone nominated you for Babcock 100",
+          html: generateNominationEmailHtml(body.firstName.trim()),
+        });
+      } catch (emailError) {
+        console.error("Failed to send nomination email:", emailError);
+        // We don't fail the whole request if email fails, as the nomination is already saved
+      }
+    }
+
     return NextResponse.json({ success: true, submissionId });
   } catch (error) {
     console.error("Nomination submission error:", error);
@@ -142,4 +169,4 @@ export async function POST(request: Request) {
       { status: 500 },
     );
   }
-}
+};
