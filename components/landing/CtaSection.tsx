@@ -38,7 +38,7 @@ export function CtaSection() {
             to be seen?
           </h2>
           <p className="text-gray-700 mb-10 max-w-xl mx-auto text-sm md:text-base font-medium">
-            Nominations are open until June 20, 2026. The process takes under
+            Nominations are open until June 30, 2026. The process takes under
             ten minutes.
           </p>
           <Button
