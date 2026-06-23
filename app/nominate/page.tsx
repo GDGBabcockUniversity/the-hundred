@@ -32,7 +32,8 @@ export default function NominatePage() {
             Babcock University.
           </h1>
           <p className="text-gray-500 mb-10 max-w-2xl mx-auto text-[14px] leading-relaxed font-medium">
-            You’re about to nominate a student for Babcock 100. Have their basic details ready, and a clear reason they deserve to be seen.
+            You’re about to nominate a student for Babcock 100. Have their basic
+            details ready, and a clear reason they deserve to be seen.
           </p>
 
           <div className="flex flex-col items-center">
@@ -50,7 +51,7 @@ export default function NominatePage() {
             </a>
 
             <p className="text-brand-red font-semibold text-[13px] mt-6">
-              * Nominations close June 20, 2026.
+              * Nominations close June 30, 2026.
             </p>
           </div>
         </div>
