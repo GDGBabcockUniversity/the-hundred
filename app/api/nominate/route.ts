@@ -63,7 +63,8 @@ const ensureHeaders = async (
 
 export const POST = async (request: Request) => {
   try {
-    const isClosed = new Date() > new Date("2026-06-30T23:59:59+01:00");
+    const isClosed = true;
+    // const isClosed = new Date() > new Date("2026-06-30T23:59:59+01:00");
     if (isClosed) {
       return NextResponse.json(
         { error: "Nominations are closed." },
