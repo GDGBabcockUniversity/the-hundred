@@ -1,7 +1,39 @@
 import { NominationWizard } from "@/components/nomination/NominationWizard";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function NominatePage() {
+  const isClosed = new Date() > new Date("2026-06-30T23:59:59+01:00");
+
+  if (isClosed) {
+    return (
+      <div className="bg-white min-h-[80vh] flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 text-center relative overflow-hidden">
+        <div className="relative z-10 max-w-2xl mx-auto pt-20">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-extrabold leading-[1.1] text-brand-navy mb-6 tracking-tight">
+            Nominations are <span className="text-[#D39B00]">Closed</span>
+          </h1>
+          <p className="text-gray-500 mb-10 text-[16px] leading-relaxed font-medium">
+            Thank you for your interest. The nomination period for Babcock 100 has officially ended.
+          </p>
+          <Link
+            href="/"
+            className="inline-flex items-center justify-center rounded-full bg-brand-navy text-white h-13 px-8 text-[14px] font-medium hover:bg-brand-navy/90 transition-colors shadow-sm"
+          >
+            Return to Homepage
+          </Link>
+        </div>
+        <div className="absolute bottom-0 left-0 right-0 select-none pointer-events-none overflow-hidden flex justify-center opacity-50">
+          <div
+            className="font-serif text-brand-navy font-extrabold leading-[0.85] tracking-tight whitespace-nowrap translate-y-[25%] text-center"
+            style={{ fontSize: "16vw" }}
+          >
+            Babcock 100
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="bg-white">
       {/* Hero Section */}
